@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Order Management app used as a reference for ReactJS TalkRise course",
   "main": "app/boot.jsx",
+  "engines": {
+    "node": "6.10.3"
+  },
   "scripts": {
     "build": "node_modules/.bin/webpack",
     "dev": "NODE_ENV=development node_modules/.bin/webpack-dev-server --progress",
