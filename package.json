@@ -1,0 +1,74 @@
+{
+  "name": "react_orderman",
+  "version": "1.0.0",
+  "description": "Order Management app used as a reference for ReactJS TalkRise course",
+  "main": "app/boot.jsx",
+  "scripts": {
+    "build": "node_modules/.bin/webpack",
+    "dev": "NODE_ENV=development node_modules/.bin/webpack-dev-server --progress",
+    "heroku-postbuild": "NODE_ENV=production node_modules/.bin/webpack -p",
+    "precommit": "node_modules/.bin/eslint app --cache --ext=.jsx",
+    "prepush": "jest",
+    "start": "node index.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "setupFiles": [
+      "./app/spec/setup.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TalkRise/React_OrderMan_Client.git"
+  },
+  "keywords": [
+    "React",
+    "Redux"
+  ],
+  "author": "TalkRise <admin@talkrise.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TalkRise/React_OrderMan_Client/issues"
+  },
+  "homepage": "https://github.com/TalkRise/React_OrderMan_Client#readme",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "bootswatch": "^3.3.7",
+    "css-loader": "^0.28.4",
+    "dotenv-webpack": "^1.5.0",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "jest": "^20.0.4",
+    "node-static": "^0.7.9",
+    "normalize.css": "^7.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "source-map-loader": "^0.2.1",
+    "style-loader": "^0.18.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "husky": "^0.13.4"
+  }
+}

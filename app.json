@@ -1,0 +1,16 @@
+{
+  "name": "TalkRise OrderMan",
+  "description": "Project used as a part of the TalkRise React Course. Manages Customer Orders.",
+  "repository": "https://github.com/talkrise/React_OrderMan",
+  "keywords": [
+    "react",
+    "redux",
+    "redux-thunk"
+  ],
+  "website": "https://www.talkrise.com",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
