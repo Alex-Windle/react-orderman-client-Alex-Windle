@@ -21,15 +21,15 @@ import {} from './styles/cssImports';
 
 
 // Component imports
-import App from './views/App';
+import Routes from './views/Routes';
 
 
 /**
- * We're saying that the <App /> should be mounted on the div with
+ * We're saying that the <Routes /> should be mounted on the div with
  * ID 'app'. If you look at our `index.ejs` file, you'll see that
  * there is a simple div with the ID 'app'.
  */
 ReactDOM.render(
-  <App />,
+  <Routes />,
   document.getElementById('app'),
 );
