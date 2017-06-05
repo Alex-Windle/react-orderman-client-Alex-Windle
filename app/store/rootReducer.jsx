@@ -35,4 +35,11 @@ const appReducer = combineReducers({
   signup: signupReducer,
 });
 
-export default (state, action) => appReducer(state, action);
+export default (state, action) => {
+  if (action.type === 'CLEAR_AUTH_ACTION') {
+    const { routing } = state;
+    state = { routing };
+  }
+  return appReducer(state, action);
+};
+
