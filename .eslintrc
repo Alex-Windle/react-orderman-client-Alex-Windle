@@ -12,6 +12,7 @@
   ],
   "parser": "babel-eslint",
   "rules": {
+    "camelcase": "off",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-named-as-default": "off",
