@@ -9,8 +9,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+import {
+  Field,
+  reduxForm,
+} from 'redux-form';
+
 
 // Component imports
+import renderTextField from '../../common/forms/renderTextField';
 import SuccessButton from '../../common/buttons/SuccessButton';
 
 
@@ -27,9 +33,14 @@ import SuccessButton from '../../common/buttons/SuccessButton';
  *
  * @extends Component
  */
-export default class LoginForm extends Component {
+class LoginForm extends Component {
   render() {
-    const { handleSubmit } = this.props;
+    const {
+      handleSubmit,
+      invalid,
+      pristine,
+    } = this.props;
+
     return (
       <div className="panel panel-default">
         <div className="container-fluid">
@@ -38,26 +49,22 @@ export default class LoginForm extends Component {
             <h3>System Admin <b>Log in</b></h3>
             <div className="spacer" />
             <div className="col-md-10 col-md-offset-1">
-              <div className="form-group">
-                <input
-                  autoComplete="off"
-                  className="form-control"
-                  placeholder="Email"
-                  type="email"
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  autoComplete="off"
-                  className="form-control"
-                  placeholder="Password"
-                  type="password"
-                />
-              </div>
+              <Field
+                name="email"
+                placeholder="Email"
+                component={renderTextField}
+              />
+              <Field
+                name="password"
+                placeholder="Password"
+                component={renderTextField}
+                type="password"
+              />
               <div className="spacer" />
               <SuccessButton
                 block
                 title="Log in"
+                disabled={pristine || invalid}
               />
               <div className="spacer" />
             </div>
@@ -79,7 +86,29 @@ export default class LoginForm extends Component {
 
 LoginForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
+  invalid: PropTypes.bool.isRequired,
+  pristine: PropTypes.bool.isRequired,
 };
 
 
 LoginForm.defaultProps = {};
+
+
+const validate = (values) => {
+  const errors = {};
+  if (!values.email) {
+    errors.email = 'Required';
+  }
+
+  if (!values.password) {
+    errors.password = 'Required';
+  }
+
+  return errors;
+};
+
+
+export default reduxForm({
+  form: 'loginForm',
+  validate,
+})(LoginForm);
