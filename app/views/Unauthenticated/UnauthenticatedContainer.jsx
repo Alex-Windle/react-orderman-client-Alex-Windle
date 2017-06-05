@@ -62,6 +62,11 @@ class UnauthenticatedContainer extends Component {
   }
 
   render() {
+    const {
+      login,
+      signup,
+    } = this.props;
+
     return (
       <UnauthenticatedLayout>
         <Switch>
@@ -70,6 +75,7 @@ class UnauthenticatedContainer extends Component {
             render={props =>
               (<LoginForm
                 {...props}
+                loading={login.isFetching}
                 handleSubmit={this.login}
               />)
             }
@@ -80,6 +86,7 @@ class UnauthenticatedContainer extends Component {
             render={props =>
               (<SignupForm
                 {...props}
+                loading={signup.isFetching}
                 handleSubmit={this.signup}
               />)
             }

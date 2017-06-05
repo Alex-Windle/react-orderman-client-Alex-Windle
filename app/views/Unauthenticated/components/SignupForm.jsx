@@ -39,6 +39,7 @@ class SignupForm extends Component {
       handleSubmit,
       invalid,
       pristine,
+      loading,
     } = this.props;
 
     return (
@@ -65,8 +66,8 @@ class SignupForm extends Component {
                 block
                 onClick={() => {}}
                 title="Sign up"
-                loading={false}
-                disabled={pristine || invalid}
+                loading={loading}
+                disabled={pristine || invalid || loading}
               />
               <div className="spacer" />
             </div>
@@ -90,6 +91,7 @@ SignupForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   invalid: PropTypes.bool.isRequired,
   pristine: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 

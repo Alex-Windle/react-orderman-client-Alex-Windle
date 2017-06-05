@@ -12,6 +12,7 @@ import { Route, Switch } from 'react-router-dom';
 // Component imports
 import CustomersCreateContainer from './Create/CustomersCreateContainer';
 import CustomersIndexContainer from './Index/CustomersIndexContainer';
+import CustomersShowContainer from './Show/CustomersShowContainer';
 
 
 /**
@@ -34,9 +35,7 @@ export default class CustomersContainer extends Component {
         <Route
           exact
           path="/customers/:id"
-          render={() =>
-            <h1>Hello Show!</h1>
-          }
+          component={CustomersShowContainer}
         />
         <Route
           path="/customers"

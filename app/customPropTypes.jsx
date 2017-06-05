@@ -57,10 +57,24 @@ export const CustomersIndexPropType = PropTypes.shape({
   error: ErrorPropType,
 });
 
+export const CustomersShowPropType = PropTypes.shape({
+  isFetching: PropTypes.bool.isRequired,
+  customer: CustomerPropType,
+  error: ErrorPropType,
+});
+
 export const LocationPropType = PropTypes.shape({
   pathname: PropTypes.string.isRequired,
   search: PropTypes.string.isRequired,
-  query: PropTypes.string.isRequired,
+  hash: PropTypes.string.isRequired,
+});
+
+
+export const MatchPropType = PropTypes.shape({
+  isExact: PropTypes.bool.isRequired,
+  params: PropTypes.any,
+  path: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 });
 
 

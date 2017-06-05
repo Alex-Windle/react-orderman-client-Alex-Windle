@@ -39,6 +39,7 @@ class LoginForm extends Component {
       handleSubmit,
       invalid,
       pristine,
+      loading,
     } = this.props;
 
     return (
@@ -63,8 +64,9 @@ class LoginForm extends Component {
               <div className="spacer" />
               <SuccessButton
                 block
+                loading={loading}
                 title="Log in"
-                disabled={pristine || invalid}
+                disabled={pristine || invalid || loading}
               />
               <div className="spacer" />
             </div>
@@ -88,6 +90,7 @@ LoginForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   invalid: PropTypes.bool.isRequired,
   pristine: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 
