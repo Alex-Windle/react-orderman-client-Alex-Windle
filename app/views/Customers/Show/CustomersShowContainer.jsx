@@ -9,10 +9,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import { history } from '../../Routes';
+
 
 // Component imports
 import AuthenticatedLayout from '../../common/layouts/AuthenticatedLayout';
 import CustomerDetailsForm from './components/CustomerDetailsForm';
+import OrdersTable from '../../common/tables/OrdersTable';
+import PageTitle from '../../common/titles/PageTitle';
+import SuccessButton from '../../common/buttons/SuccessButton';
 
 
 // Actions imports
@@ -21,11 +26,14 @@ import {
   performUpdateCustomer,
 } from './actions/customersShowActions';
 
+import { performOrdersIndexAction } from '../../Orders/Index/actions/ordersIndexActions';
+
 
 // PropTypes imports
 import {
   CustomersShowPropType,
   MatchPropType,
+  OrdersIndexPropType,
   ReduxFormPropType,
 } from '../../../customPropTypes';
 
@@ -43,6 +51,10 @@ class CustomersShowContainer extends Component {
       this.props.performRetrieveCustomer(id);
     };
 
+    this.retrieveOrdersForCustomer = (page = 1) => {
+      this.props.performOrdersIndexAction(page, null, this.props.match.params.id);
+    };
+
     this.handleSubmit = (e) => {
       e.preventDefault();
       const { values } = this.props.customerDetailsForm;
@@ -52,6 +64,7 @@ class CustomersShowContainer extends Component {
 
   componentWillMount() {
     this.retrieveCustomer(this.props.match.params.id);
+    this.retrieveOrdersForCustomer(1);
   }
 
   render() {
@@ -60,6 +73,7 @@ class CustomersShowContainer extends Component {
         isFetching,
         customer,
       },
+      ordersIndex,
     } = this.props;
 
     const customerName = customer.first_name ?
@@ -74,7 +88,7 @@ class CustomersShowContainer extends Component {
         <div>
           <br />
           {(() => {
-            if (isFetching) {
+            if (isFetching || ordersIndex.isFetching) {
               return <h4 className="text-center">Loading Customer...</h4>;
             }
             return (
@@ -88,6 +102,31 @@ class CustomersShowContainer extends Component {
                   }}
                 />
                 <div className="spacer" />
+                <div className="row">
+                  <div className="col-md-8">
+                    <PageTitle
+                      title={`${customer.first_name} ${customer.last_name}'s Orders`}
+                    />
+                  </div>
+                  <div className="col-md-4">
+                    <br />
+                    <SuccessButton
+                      block
+                      loading={false}
+                      title="Add a New Order"
+                      onClick={
+                        () => history.push(`/orders/create/${this.props.match.params.id}`)
+                      }
+                      disabled={false}
+                    />
+                    <br className="hidden-md hidden-lg" />
+                  </div>
+                </div>
+                <OrdersTable
+                  pagination={ordersIndex.pagination}
+                  handlePageChange={this.retrieveOrdersForCustomer}
+                  orders={ordersIndex.orders}
+                />
               </div>
             );
           })()}
@@ -100,7 +139,9 @@ class CustomersShowContainer extends Component {
 
 CustomersShowContainer.propTypes = {
   customersShow: CustomersShowPropType.isRequired,
+  ordersIndex: OrdersIndexPropType.isRequired,
   match: MatchPropType.isRequired,
+  performOrdersIndexAction: PropTypes.func.isRequired,
   performRetrieveCustomer: PropTypes.func.isRequired,
   performUpdateCustomer: PropTypes.func.isRequired,
   customerDetailsForm: ReduxFormPropType,
@@ -115,10 +156,12 @@ CustomersShowContainer.defaultProps = {
 const mapStateToProps = state => ({
   customersShow: state.customersShow,
   customerDetailsForm: state.form.customerDetailsForm,
+  ordersIndex: state.ordersIndex,
 });
 
 
 const mapDispatchToProps = () => ({
+  performOrdersIndexAction,
   performRetrieveCustomer,
   performUpdateCustomer,
 });

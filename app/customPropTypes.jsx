@@ -11,16 +11,19 @@
 // Module imports
 import PropTypes from 'prop-types';
 
+
 export const ErrorPropType = PropTypes.shape({
   message: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   status: PropTypes.number.isRequired,
 });
 
+
 export const CustomersCreatePropType = PropTypes.shape({
   isFetching: PropTypes.bool.isRequired,
   error: ErrorPropType,
 });
+
 
 export const LoginPropType = PropTypes.shape({
   isFetching: PropTypes.bool.isRequired,
@@ -50,6 +53,7 @@ export const CustomerPropType = PropTypes.shape({
   __v: PropTypes.number,
 });
 
+
 export const CustomersIndexPropType = PropTypes.shape({
   isFetching: PropTypes.bool.isRequired,
   customers: PropTypes.arrayOf(CustomerPropType),
@@ -57,11 +61,13 @@ export const CustomersIndexPropType = PropTypes.shape({
   error: ErrorPropType,
 });
 
+
 export const CustomersShowPropType = PropTypes.shape({
   isFetching: PropTypes.bool.isRequired,
   customer: CustomerPropType,
   error: ErrorPropType,
 });
+
 
 export const LocationPropType = PropTypes.shape({
   pathname: PropTypes.string.isRequired,
@@ -75,6 +81,40 @@ export const MatchPropType = PropTypes.shape({
   params: PropTypes.any,
   path: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
+});
+
+
+export const OrderPropType = PropTypes.shape({
+  _id: PropTypes.string,
+  createdAt: PropTypes.string,
+  updatedAt: PropTypes.string,
+  date: PropTypes.string,
+  description: PropTypes.string,
+  customer_id: PropTypes.any,
+  user_id: PropTypes.string,
+  __v: PropTypes.number,
+  status: PropTypes.string,
+});
+
+
+export const OrdersCreatePropType = PropTypes.shape({
+  isFetching: PropTypes.bool.isRequired,
+  error: ErrorPropType,
+});
+
+
+export const OrdersIndexPropType = PropTypes.shape({
+  isFetching: PropTypes.bool.isRequired,
+  error: ErrorPropType,
+  orders: PropTypes.arrayOf(OrderPropType),
+  pagination: PaginationPropType,
+});
+
+
+export const OrdersShowPropType = PropTypes.shape({
+  isFetching: PropTypes.bool.isFetching,
+  error: ErrorPropType,
+  order: OrderPropType,
 });
 
 
