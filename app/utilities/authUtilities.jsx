@@ -22,6 +22,3 @@ export const isNotAuthenticated = () => {
     history.replace({ pathname: '/customers' });
   }
 };
-
-
-

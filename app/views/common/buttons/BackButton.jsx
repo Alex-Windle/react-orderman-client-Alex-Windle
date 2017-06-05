@@ -6,7 +6,10 @@
 
 // Module imports
 import React, { Component } from 'react';
-import { hashHistory } from 'react-router';
+
+
+// Custom imports
+import { history } from '../../Routes';
 
 /**
  * BackButton is a button used for back actions.
@@ -21,7 +24,7 @@ export default class BackButton extends Component {
       <h4>
         <a
           role="button"
-          onClick={() => hashHistory.goBack()}
+          onClick={() => history.goBack()}
         >
           Go Back
         </a>

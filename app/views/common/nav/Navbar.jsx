@@ -62,7 +62,7 @@ export class Navbar extends Component {
             </button>
             <a
               className="navbar-brand"
-              href="#"
+              href="/customers"
             >
               React OrderMan
             </a>
@@ -115,8 +115,8 @@ const mapStateToProps = state => ({
 });
 
 
-const mapDispatchToProps = () =>({
-  performClearAuth
+const mapDispatchToProps = () => ({
+  performClearAuth,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps())(Navbar);

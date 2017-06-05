@@ -14,10 +14,14 @@ import {
   isNotAuthenticated,
 } from '../../../utilities/authUtilities';
 
+import {
+  LocationPropType,
+} from '../../../customPropTypes';
+
 /**
  * HOC to detect Authentication Status and Route
  */
-export default BaseComponent => {
+export default (BaseComponent) => {
   class NotProtected extends Component {
     componentWillMount() {
       isNotAuthenticated();
@@ -28,9 +32,16 @@ export default BaseComponent => {
         isNotAuthenticated();
       }
     }
+
     render() {
       return <BaseComponent {...this.props} />;
     }
   }
+
+
+  NotProtected.propTypes = {
+    location: LocationPropType.isRequired,
+  };
+
   return withRouter(NotProtected);
-}
+};

@@ -54,7 +54,7 @@ export const performLogin = credentials =>
       .then((response) => {
         localStorage.setItem('access_token', response.auth.access_token);
         dispatch(receiveLoginSuccess(response.auth.access_token));
-        history.push('/login');
+        history.push('/customers');
       })
       .catch((e) => {
         dispatch(receiveLoginFailure(e));
