@@ -46,70 +46,33 @@ export const axiosInstance = axios.create({
 
 
 export const handleError = (e) => {
-  const message = e.message || 'Something went wrong. Please refresh your page.';
+  const error = e && e.response ?
+    e.response.data :
+    baseError;
+  const message = error.message || 'Something went wrong. Please refresh your page.';
   alert(message); // eslint-disable-line no-alert
-  return message;
+  throw error;
 };
 
 export const get = path =>
-  new Promise((resolve, reject) => {
-    axiosInstance.get(path, getHeaders())
-      .then((response) => {
-        resolve(response.data);
-      })
-      .catch((e) => {
-        const error = e && e.response ?
-          e.response.data :
-          baseError;
-        handleError(error);
-        reject(error);
-      });
-  });
+  axiosInstance.get(path, getHeaders())
+    .then(response => response.data)
+    .catch(handleError);
 
 
 export const post = (path, data) =>
-  new Promise((resolve, reject) => {
     axiosInstance.post(path, data, getHeaders())
-      .then((response) => {
-        resolve(response.data);
-      })
-      .catch((e) => {
-        const error = e && e.response ?
-          e.response.data :
-          baseError;
-        handleError(error);
-        reject(error);
-      });
-  });
+      .then(response => response.data)
+      .catch(handleError);
 
 
 export const patch = (path, data) =>
-  new Promise((resolve, reject) => {
-    axiosInstance.patch(path, data, getHeaders())
-      .then((response) => {
-        resolve(response.data);
-      })
-      .catch((e) => {
-        const error = e && e.response ?
-          e.response.data :
-          baseError;
-        handleError(error);
-        reject(error);
-      });
-  });
+  axiosInstance.patch(path, data, getHeaders())
+    .then(response => response.data)
+    .catch(handleError);
 
 
 export const del = path =>
-  new Promise((resolve, reject) => {
-    axiosInstance.delete(path, getHeaders())
-      .then((response) => {
-        resolve(response.data);
-      })
-      .catch((e) => {
-        const error = e && e.response ?
-          e.response.data :
-          baseError;
-        handleError(error);
-        reject(error);
-      });
-  });
+  axiosInstance.delete(path, getHeaders())
+    .then(response => response.data)
+    .catch(handleError);
