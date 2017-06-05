@@ -15,8 +15,7 @@ import createHashHistory from 'history/createHashHistory';
 
 
 // Page imports
-import LoginContainer from './Login/LoginContainer';
-import SignupContainer from './Signup/SignupContainer';
+import UnauthenticatedContainer from './Unauthenticated/UnauthenticatedContainer';
 
 
 const history = createHashHistory();
@@ -36,13 +35,8 @@ export default class Routes extends Component {
       <Router history={history}>
         <Switch>
           <Route
-            path="/login"
-            component={LoginContainer}
-          />
-          <Route
-            exact
             path="/"
-            component={SignupContainer}
+            component={UnauthenticatedContainer}
           />
         </Switch>
       </Router>
