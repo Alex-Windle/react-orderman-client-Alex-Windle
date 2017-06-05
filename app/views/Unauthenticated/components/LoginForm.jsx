@@ -72,7 +72,7 @@ class LoginForm extends Component {
         </div>
         <div className="container-fluid">
           <h4>
-            <Link to="/">
+            <Link to="/signup">
               {"I don't have an account yet"}
             </Link>
           </h4>

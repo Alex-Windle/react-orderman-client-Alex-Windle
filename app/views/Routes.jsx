@@ -18,7 +18,10 @@ import {
 import createHashHistory from 'history/createHashHistory';
 
 
-// Page imports
+// Component imports
+import CustomersContainer from './Customers/CustomersContainer';
+import notProtectedHOC from './common/hoc/notProtected';
+import protectedHOC from './common/hoc/protected';
 import UnauthenticatedContainer from './Unauthenticated/UnauthenticatedContainer';
 
 
@@ -45,8 +48,12 @@ export default class Routes extends Component {
         <ConnectedRouter history={history}>
           <Switch>
             <Route
+              path="/customers"
+              component={protectedHOC(CustomersContainer)}
+            />
+            <Route
               path="/"
-              component={UnauthenticatedContainer}
+              component={notProtectedHOC(UnauthenticatedContainer)}
             />
           </Switch>
         </ConnectedRouter>

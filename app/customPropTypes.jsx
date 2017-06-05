@@ -19,8 +19,8 @@ export const ErrorPropType = PropTypes.shape({
 
 
 export const ReduxFormPropType = PropTypes.shape({
-  registeredFields: PropTypes.any.isRequired,
-  fields: PropTypes.any.isRequired,
+  registeredFields: PropTypes.any,
+  fields: PropTypes.any,
   values: PropTypes.any,
   syncErrors: PropTypes.any,
 });

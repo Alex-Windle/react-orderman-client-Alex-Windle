@@ -22,6 +22,7 @@ import {
   performLogin,
 } from './actions/loginActions';
 
+
 import {
   performSignup,
 } from './actions/signupActions';
@@ -42,8 +43,6 @@ import {
  *   UnauthenticatedLayout
  *   LoginForm or SignupForm depending on Route
  *
- *
- * @extends Component
  */
 class UnauthenticatedContainer extends Component {
   constructor(props) {
@@ -77,7 +76,7 @@ class UnauthenticatedContainer extends Component {
           />
           <Route
             exact
-            path="/"
+            path="/signup"
             render={props =>
               (<SignupForm
                 {...props}
@@ -101,6 +100,7 @@ UnauthenticatedContainer.propTypes = {
   signupForm: ReduxFormPropType,
 };
 
+
 UnauthenticatedContainer.defaultProps = {
   loginForm: {},
   signupForm: {},
@@ -113,6 +113,7 @@ const mapStateToProps = state => ({
   signup: state.signup,
   signupForm: state.form.signupForm,
 });
+
 
 const mapDispatchToProps = () => ({
   performLogin,
