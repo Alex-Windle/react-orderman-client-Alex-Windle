@@ -26,7 +26,7 @@ describe('CustomersTable component', () => {
       <CustomersTable
         pagination={testPagination}
         handlePageChange={jest.fn()}
-        customers={testCustomer}
+        customers={[testCustomer]}
       />,
     ).toJSON();
 
