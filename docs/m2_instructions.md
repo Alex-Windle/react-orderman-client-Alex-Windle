@@ -81,6 +81,12 @@ Use the *Application Structure* above to create several new files. Again, don't 
 
 * `store/configureStore.jsx` - *Create and export a Redux store with `redux-thunk` middleware, `react-router-redux` middleware, and the Redux DevTools.*
 
+**Update Files**
+
+* Update `Routes.jsx` to use a `ConnectedRouter` from `react-router-redux` and wrap the entire component in a `Provider` using the Redux store you created.
+
+**Keep Creating New Files**
+
 * `utilities/apiUtilities.jsx` - **COPY AND PASTE this file from this [Gist](https://gist.github.com/masiamj/fb1f00a76a5b8ff81481811d6c2658ae).**
 
 * `utilities/authUtilities.jsx` - **COPY AND PASTE this file from this [Gist](https://gist.github.com/masiamj/65d302df8ea76f49ee3cccd6c47b8027).**
@@ -113,12 +119,29 @@ Use the *Application Structure* above to create several new files. Again, don't 
 
 * `Customers/Index/reducers/customersIndexReducers.jsx` - *Redux reducers that track the state of the customers index requests.*
 
-* `Customers/components/OrdersTable.jsx` - *Table rendering rows of Customer data. Also renders a `Pagination` component that responds to page change events.*
+* `Customers/Index/components/CustomersTable.jsx` - *Table rendering rows of Customer data. Also renders a `Pagination` component that responds to page change events.*
 
 * `Customers/Index/CustomersIndexContainer.jsx` - *Connected Component that represents a list of Customers. Renders an `AuthenticatedLayout`, `SearchBar`, `SuccessButton`, and `CustomersTable`.*
 
+* `Customers/Show/actions/customersShowActions.jsx` - *Redux-Thunk Actions that GET and PATCH to /customers/:id.*
+
+* `Customers/Show/reducers/customersShowReducers.jsx` - *Redux reducers that track the state of the customers show requests.*
+
+* `Customers/Show/components/CustomerDetailsForm.jsx` - *Form for rending/updating customer data. Should be able to render with or without initialValues.*
+
+* `Customers/Show/CustomersShowContainer.jsx` - *Connected Component that represents a single Customer. Renders an `AuthenticatedLayout`, `CustomerDetailsForm` with initialValues.*
+
+* `Customers/Create/actions/customersCreateActions.jsx` - *Redux-Thunk Actions that POST to /customers.*
+
+* `Customers/Create/reducers/customersShowReducers.jsx` - *Redux reducers that track the state of the customers create requests.*
+
+* `Customers/Create/CustomersCreateContainer.jsx` - *Connected Component that represents creating a single customer. Renders an `AuthenticatedLayout`, `CustomerDetailsForm` without initialValues.*
+
 * `Customers/CustomersContainer.jsx` - *A container that manages routing of Customers paths.. It renders a `Switch` from `react-router-dom` as well as three `Route`s, one pointing to `/customers` (renders `CustomersIndexContainer`), one pointing to `/customers/create` (renders `CustomersCreateContainer`), and one pointing to `/customers/:id` (renders `CustomersShowContainer`).
 
+**Update Files**
+
+* Update `Routes.jsx` to display the `/customers` route with the `protected` HOC and the `/` route with the `notProtected` HOC.
 
 
 
