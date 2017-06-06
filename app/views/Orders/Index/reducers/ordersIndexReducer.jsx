@@ -31,7 +31,7 @@ export default (reduxState = initialState, action) => {
     case REQUEST_ORDERS_INDEX_ACTION:
       return {
         ...reduxState,
-        isFetching: false,
+        isFetching: true,
         error: null,
       };
     case RECEIVE_ORDERS_INDEX_SUCCESS:
@@ -39,6 +39,7 @@ export default (reduxState = initialState, action) => {
         ...reduxState,
         isFetching: false,
         orders: payload.orders,
+        pagination: payload.pagination,
       };
     case RECEIVE_ORDERS_INDEX_FAILURE:
       return {
