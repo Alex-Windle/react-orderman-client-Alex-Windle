@@ -16,10 +16,6 @@ That will be covered in the next milestone once we introduce Redux.
 
 Here we'll explain how to complete Milestone 1.
 
-**If you need further help completing Milestone 1, please reference our solution in the [`m1_complete`](https://github.com/TalkRise/React_OrderMan/tree/m1_complete) branch of this repo.**
-
-[Milestone 1 Demo](https://react-orderman-m1.herokuapp.com/#/)
-
 
 ## When to Use This Guide
 
@@ -28,6 +24,7 @@ You should use this guide when you are trying to complete Milestone 1
 ## Overview
 
 * [Goals](#goals)
+* [Reference Solution](#reference-solution)
 * [Setup](#setup)
 * [Guide](#guide)
 
@@ -37,6 +34,12 @@ The goals of Milestone 1
 
 * Feature-Focused Application Structure
 * Routing with `react-router-dom`
+
+## Reference Solution
+
+**If you need further help completing Milestone 1, please reference our solution in the [`m1_complete`](https://github.com/TalkRise/React_OrderMan/tree/m1_complete) branch of this repo.**
+
+[Milestone 1 Demo](https://react-orderman-m1.herokuapp.com/#/)
   
 ## Setup
 
