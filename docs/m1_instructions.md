@@ -5,19 +5,25 @@
 # TalkRise OrderMan Milestone 1
 These are the docs for Milestone 1 of this project.
 
+When you are done with this milestone, you should have
+
+* Created a login and sign up page
+* Setup a common layout between them for unauthenticated pages
+* Used React-Router to route between the pages
+
+You DO NOT need to have the forms working at this point, which means you can't login or sign up.
+That will be covered in the next milestone once we introduce Redux.
+
 Here we'll explain how to complete Milestone 1.
 
-**If you need further help completing Milestone 1, please reference our solution in the `m1_complete` branch of this repo.**
-
-[Our Solution](https://github.com/TalkRise/React_OrderMan/tree/m1_complete)
+**If you need further help completing Milestone 1, please reference our solution in the [`m1_complete`](https://github.com/TalkRise/React_OrderMan/tree/m1_complete) branch of this repo.**
 
 [Milestone 1 Demo](https://react-orderman-m1.herokuapp.com/#/)
 
 
 ## When to Use This Guide
 
-* You are just getting started on Milestone 1 and need instructions about what to build.
-* You are stuck trying to complete Milestone 1 and want to know what to do next.
+You should use this guide when you are trying to complete Milestone 1
 
 ## Overview
 
@@ -71,45 +77,23 @@ yarn add react-router-dom history
 
 **Create New Files**
 
-Use the *Application Structure* above to create several new files.
+Use the *Application Structure* above to create several new files. 
 
 `SuccessButton.jsx` - *A reusable button*
-
-|Prop |Type |
-|------|------|
-|block |bool |
-|disabled|bool|
-|loading|bool|
-|title|string|
-|onClick|func|
 
 `UnauthenticatedLayout.jsx` - *A reusable layout component that provides consistent structure to the Login and Signup (unauthenticated) pages*
 
 *The `UnauthenticatedLayout` component should render a `Logo`, as well as a `LoginForm`*
 
-|Prop |Type |
-|------|------|
-|children |React.element |
-
 `Logo.jsx` - *Reusable component to display a Logo (image)*
 
-`LoginForm.jsx` - *A form component that renders email and password text inputs, as well as a `SuccessButton`. Also contains a `Link` from `react-router-dom` that links to the */signup* route.*
+`LoginForm.jsx` - *A form component that renders email and password text inputs, as well as a `SuccessButton`. Also contains a 
 
-|Prop |Type |
-|------|------|
-|handleSubmit |func |
+`Link` from `react-router-dom` that links to the */signup* route.*
 
 `SignupForm.jsx` - *A form component that renders email and password text inputs, as well as a `SuccessButton`. Also contains a `Link` from `react-router-dom` that links to the */login* route.*
 
-|Prop |Type |
-|------|------|
-|handleSubmit |func |
-
 `UnauthenticatedContainer.jsx` - *A container that renders an `UnauthenticatedLayout`. It also renders a `Switch` from `react-router-dom` as well as two `Route`s, one pointing to the */login* (renders `LoginForm`) and one pointing to */signup* (renders `SignupForm`).*
-
-|Prop |Type |
-|------|------|
-|handleSubmit |func |
 
 `Routes.jsx` - *A container that renders several components from `react-router-dom` that controls routing. In this milestone, `Routes` will render a simple `Router` with a `history` object created using `history/createHashHistory`, a `Switch`, and a `Route` that renders an `UnauthenticatedContainer`.*
 
