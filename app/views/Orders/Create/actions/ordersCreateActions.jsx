@@ -35,7 +35,7 @@ const receiveOrdersCreateFailure = error => ({
 export const performOrdersCreateAction = params =>
   (dispatch) => {
     dispatch(requestOrdersCreateAction());
-    post('/orders', params)
+    return post('/orders', params)
       .then(() => {
         dispatch(receiveOrdersCreateSuccess());
         history.goBack();

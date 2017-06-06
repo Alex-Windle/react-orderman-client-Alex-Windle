@@ -52,7 +52,7 @@ const receiveOrdersDeleteFailure = error => ({
 export const performRetrieveOrder = id =>
   (dispatch) => {
     dispatch(requestOrdersShowAction());
-    get(`/orders/${id}`)
+    return get(`/orders/${id}`)
       .then((response) => {
         dispatch(receiveOrdersShowSuccess(response.order));
       })
@@ -65,7 +65,7 @@ export const performRetrieveOrder = id =>
 export const performUpdateOrder = (id, updates) =>
   (dispatch) => {
     dispatch(requestOrdersShowAction());
-    patch(`/orders/${id}`, updates)
+    return patch(`/orders/${id}`, updates)
       .then((response) => {
         dispatch(receiveOrdersShowSuccess(response.order));
       })
@@ -78,7 +78,7 @@ export const performUpdateOrder = (id, updates) =>
 export const performDeleteOrder = id =>
   (dispatch) => {
     dispatch(requestOrdersShowAction());
-    del(`/orders/${id}`)
+    return del(`/orders/${id}`)
       .then(() => {
         dispatch(receiveOrdersDeleteSuccess());
         history.goBack();

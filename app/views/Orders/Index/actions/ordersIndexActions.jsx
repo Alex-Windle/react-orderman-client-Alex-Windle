@@ -38,7 +38,7 @@ export const performOrdersIndexAction = (page = 1, searchTerm, customer_id) =>
     const basePath = `/orders?page=${page}`;
     const enhancedPath = searchTerm ? `${basePath}&searchTerm=${searchTerm}` : basePath;
     const path = customer_id ? `${enhancedPath}&customer_id=${customer_id}` : enhancedPath;
-    get(path)
+    return get(path)
       .then((response) => {
         const pagination = {
           total: response.total,
