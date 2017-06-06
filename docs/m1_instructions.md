@@ -30,9 +30,7 @@ Here we'll explain how to complete Milestone 1.
 The goals of Milestone 1 
 
 * Feature-Focused Application Structure
-* Redux Setup
-* Routing with `react-router` and `react-router-redux`
-* Forms with `redux-form`
+* Routing with `react-router-dom`
   
 ## Setup
 
@@ -51,17 +49,45 @@ yarn
 npm run dev
 ```
 
-If everything is running correctly, you should see the phrase "You know what to do ;)" in your browser.
+If everything is running correctly, you should see the phrase "You know what to do" in your browser.
 
-## Guide
-
-**These are the instructions to complete Milestone 1. They are meant to tell you *what* to do, but not *how* to do it. If you need additional help, see the reference solution by checking out branch `m1_complete`.**
-
-### Application Structure
+## Application Structure
 
 We use a feature-focused organization for our app where our directories represent the different pages of the application.
 
-Our solution also creates several *common* components that are shared across pages in the app, in addition to page-specific components.
+ <p align="center">
+   <img src="../logo/Master_App_Structure.png">
+ </p>
+ 
+ ## Instructions to Complete M1
+ 
+These are the instructions to complete Milestone 1. They are meant to tell you *what* to do, but not *how* to do it. If you need additional help, see the reference solution by checking out branch `m1_complete`.
+
+**Install New Dependencies**
+
+```bash
+yarn add react-router-dom
+```
+
+**Create New Files**
+
+Use the *Application Structure* above to create several new files.
+
+block: PropTypes.bool,
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+`SuccessButton.jsx`
+
+|Prop |Type |
+|------|------|
+|block |bool |
+|disabled|bool|
+|loading|bool|
+|title|string|
+|onClick|func|
+
 
 ## License
 
