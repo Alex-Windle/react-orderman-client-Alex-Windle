@@ -16,7 +16,7 @@ Here we'll explain how to complete Milestone 1.
 
 ## When to Use This Guide
 
-* You are just getting started on the `master` branch and need instructions about what to build.
+* You are just getting started on Milestone 1 and need instructions about what to build.
 * You are stuck trying to complete Milestone 1 and want to know what to do next.
 
 ## Overview
