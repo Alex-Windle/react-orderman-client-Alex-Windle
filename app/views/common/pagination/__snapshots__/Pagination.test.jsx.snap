@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination component matches snapshot 1`] = `
+<div>
+  <div
+    className="container-fluid"
+  >
+    <ul
+      className="pagination"
+    >
+      <li
+        className="disabled"
+      >
+        <a
+          onClick={[Function]}
+          role="button"
+        >
+          «
+        </a>
+      </li>
+      <li
+        className="active"
+      >
+        <a
+          onClick={[Function]}
+          role="button"
+        >
+          1
+        </a>
+      </li>
+      <li
+        className=""
+      >
+        <a
+          onClick={[Function]}
+          role="button"
+        >
+          2
+        </a>
+      </li>
+      <li
+        className=""
+      >
+        <a
+          disabled={false}
+          onClick={[Function]}
+          role="button"
+        >
+          »
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="container-fluid"
+  >
+    Showing Results 
+    1
+     - 
+    10
+  </div>
+</div>
+`;

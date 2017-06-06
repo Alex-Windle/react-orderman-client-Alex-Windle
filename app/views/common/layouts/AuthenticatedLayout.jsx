@@ -34,6 +34,7 @@ export default class AuthenticatedLayout extends Component {
       showBackButton,
       pageTitle,
     } = this.props;
+
     return (
       <div>
         <Navbar />

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar component matches snapshot 1`] = `
+<div
+  className="form-group"
+>
+  <input
+    autoComplete="off"
+    className="form-control"
+    disabled={false}
+    onChange={[Function]}
+    placeholder="Placeholder"
+    type="text"
+  />
+</div>
+`;

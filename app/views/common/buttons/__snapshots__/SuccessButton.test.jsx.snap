@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SuccessButton component matches snapshot- loading, disabled, block 1`] = `
+<button
+  className="btn btn-info btn-block"
+  disabled={true}
+  onClick={[Function]}
+  type="submit"
+>
+  <i
+    className="fa fa-spin fa-spinner"
+  />
+</button>
+`;
+
+exports[`SuccessButton component matches snapshot- not loading, disabled, block 1`] = `
+<button
+  className="btn btn-info "
+  disabled={true}
+  onClick={[Function]}
+  type="submit"
+>
+  Go
+</button>
+`;
+
+exports[`SuccessButton component matches snapshot- not loading, not disabled, block 1`] = `
+<button
+  className="btn btn-info btn-block"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  Go
+</button>
+`;
+
+exports[`SuccessButton component matches snapshot- not loading, not disabled, not block 1`] = `
+<button
+  className="btn btn-info "
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  Go
+</button>
+`;
