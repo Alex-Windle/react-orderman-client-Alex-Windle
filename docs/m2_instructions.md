@@ -36,13 +36,15 @@ You should use this guide when you are completing Milestone 2.
 
 1. Make sure the [API](https://github.com/TalkRise/React_OrderMan_API) is running.
 
-2. Make sure you are using the right version of Node and npm (we use nvm for node version management)
+2. For the API docs, check [here](https://react-orderman-api.herokuapp.com/docs).
+
+3. Make sure you are using the right version of Node and npm (we use nvm for node version management)
 
 ```bash
 nvm use
 ```
 
-2. Install dependencies and start the developent server
+4. Install dependencies and start the developent server for this repo
 
 ```bash
 yarn
@@ -75,41 +77,45 @@ yarn add redux react-redux react-router-redux@next redux-form redux-thunk
 
 Use the *Application Structure* above to create several new files. Again, don't freak out, we'll guide through. 
 
-* `rootReducer.jsx` - *File to create and combine Redux reducers. Start with the `routerReducer` from `react-router-redux` and the `form-reducer` from `redux-form`.*
+* `store/rootReducer.jsx` - *File to create and combine Redux reducers. Start with the `routerReducer` from `react-router-redux` and the `form-reducer` from `redux-form`.*
 
-* `configureStore.jsx` - *Create and export a Redux store with `redux-thunk` middleware, `react-router-redux` middleware, and the Redux DevTools.*
+* `store/configureStore.jsx` - *Create and export a Redux store with `redux-thunk` middleware, `react-router-redux` middleware, and the Redux DevTools.*
 
-* `apiUtilities.jsx` - **COPY AND PASTE this file from this [Gist]().**
+* `utilities/apiUtilities.jsx` - **COPY AND PASTE this file from this [Gist](https://gist.github.com/masiamj/fb1f00a76a5b8ff81481811d6c2658ae).**
 
+* `utilities/authUtilities.jsx` - **COPY AND PASTE this file from this [Gist](https://gist.github.com/masiamj/65d302df8ea76f49ee3cccd6c47b8027).**
+
+* `hoc/protected.jsx` - *HOC to use in routing to make sure access to pages is authenticated. Use this HOC for pages like Customers and Orders. This component checks on componentWillMount and componentWillReceiveProps to make sure a user is authenticated.*
+
+* `hoc/notProtected.jsx` - *HOC to use in routing to make sure access to pages is not authenticated. Use this HOC for pages like Login and Signup. This component checks on componentWillMount and componentWillReceiveProps to make sure a user is not authenticated.*
+
+* `common/nav/NavbarLink.jsx` - *Component that renders a list-item indicating a link in the `Navbar`. Use Bootstrap's normal navbar model.*
+
+* `common/nav/Navbar.jsx` - *Component that renders a Bootstrap nav. Will Contain `NavbarLink`s for Customers and Orders.*
+
+* `common/pagination/Pagination.jsx` - *Renders Bootstrap's pagination component. Supports moving to a specific page by choosing page number and incrementing/decrementing pages.*
+
+* `common/titles/PageTitle.jsx` - *Renders a simple page title that can be used on any page.*
+
+* `common/layouts/AuthenticatedLayout` - *Reusable layout component for authenticated pages like Customer and Orders. Renders `Navbar`, `PageTitle`, and `children` in a reusable way.*
+
+* `Unauthenticated/actions/loginActions.jsx` - *Redux-Thunk actions that POST to /users/authenticate.*
+
+* `Unauthenticated/actions/signupActions.jsx` - *Redux-Thunk actions that POST to /users/register.*
+
+* `Unauthenticated/reducers/loginReducer.jsx` - *Redux reducer that tracks state of login request.*
+
+* `Unauthenticated/reducers/signupReducer.jsx` - *Redux reducer that tracks state of signup request.*
+
+* `Unauthenticated/reducers/authReducer.jsx` - *Redux reducer that tracks authentication state. On initialization, it should check localStorage for the stored JWT, and set that in the initialState of the reducer.*
+
+* `Customers/CustomersContainer.jsx` - *A container that manages routing of Customers paths.. It renders a `Switch` from `react-router-dom` as well as three `Route`s, one pointing to `/customers` (renders `CustomersIndexContainer`), one pointing to `/customers/create` (renders `CustomersCreateContainer`), and one pointing to `/customers/:id` (renders `CustomersShowContainer`).
 
 
 
 
 ======================================
 
-* `SuccessButton.jsx` - *A reusable button*
-
-* `UnauthenticatedLayout.jsx` - *A reusable layout component that provides consistent structure to the Login and Signup (unauthenticated) pages*
-
-  * The `UnauthenticatedLayout` component should render a `Logo`, as well as a `LoginForm`*
-
-* `Logo.jsx` - *Reusable component to display a Logo (image)*
-
-* `LoginForm.jsx` - *A form component that renders email and password text inputs, as well as a `SuccessButton`. Also contains a 
-
-* `Link` from `react-router-dom` that links to the */signup* route.*
-
-* `SignupForm.jsx` - *A form component that renders email and password text inputs, as well as a `SuccessButton`. Also contains a `Link` from `react-router-dom` that links to the */login* route.*
-
-* `UnauthenticatedContainer.jsx` - *A container that renders an `UnauthenticatedLayout`. It also renders a `Switch` from `react-router-dom` as well as two `Route`s, one pointing to the */login* (renders `LoginForm`) and one pointing to */signup* (renders `SignupForm`).*
-
-* `Routes.jsx` - *A container that renders several components from `react-router-dom` that controls routing. In this milestone, `Routes` will render a simple `Router` with a `history` object created using `history/createHashHistory`, a `Switch`, and a `Route` that renders an `UnauthenticatedContainer`.*
-
-**Update `boot.jsx`**
-
-Update `boot.jsx` to render the `Routes` component instead of `App`.
-
-Delete the `App.jsx` component.
 
 ## License
 
