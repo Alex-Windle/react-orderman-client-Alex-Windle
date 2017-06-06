@@ -3,23 +3,20 @@
 </p>
 
 # TalkRise OrderMan Milestone 1
-These are the docs for Milestone 1 of this project. They are meant to tell you *what* to do, but not *how* to do it in great detail. If you need additional help, see the reference solution by checking out branch [`m1_complete`](https://github.com/TalkRise/React_OrderMan/tree/m1_complete), ask your instructor, or ask another student.
+These are the docs for Milestone 1 of this project. They are meant to tell you *what* to do, but not *how* to do it in great detail. If you need additional help, see the reference solution by checking out branch [`m1_complete`](https://github.com/TalkRise/React_OrderMan/tree/m1_complete), or feel free to ask your instructor or other students.
 
 When you are done with this milestone, you should have
 
-* Created a login and sign up page
+* Created Login and Signup pages
 * Setup a common layout between them for unauthenticated pages
-* Used React-Router to route between the pages
+* Used `react-router-dom` to route between the Login and Signup pages
 
-You DO NOT need to have the forms working at this point, which means you can't login or sign up.
-That will be covered in the next milestone once we introduce Redux.
-
-Here we'll explain how to complete Milestone 1.
+You DO NOT need to have the Login and Signup forms working yet. We will cover the login and signup process in the next milestone when we introduce Redux.
 
 
 ## When to Use This Guide
 
-You should use this guide when you are trying to complete Milestone 1
+You should use this guide when you are completing Milestone 1.
 
 ## Overview
 
@@ -27,13 +24,6 @@ You should use this guide when you are trying to complete Milestone 1
 * [Reference Solution](#reference-solution)
 * [Setup](#setup)
 * [Guide](#guide)
-
-## Goals
-
-The goals of Milestone 1 
-
-* Feature-Focused Application Structure
-* Routing with `react-router-dom`
 
 ## Reference Solution
 
