@@ -143,10 +143,41 @@ Use the *Application Structure* above to create several new files. Again, don't 
 
 * Update `Routes.jsx` to display the `/customers` route with the `protected` HOC and the `/` route with the `notProtected` HOC.
 
+## Composite Redux State
 
+```bash
+{
+  auth: {
+    access_token: <string>,
+  },
+  customersCreate: {
+    isFetching: <bool>,
+    error: <Object || null>,
+  },
+  customersIndex: {
+    isFetching: <bool>,
+    customers: <array<Object>>,
+    error: <Object || null>,
+  },
+  customersShow: {
+    isFetching: <bool>,
+    customer: <Object>,
+    error: <Object || null>,
+  },
+  form: <redux-form>,
+  login: {
+    isFetching: <bool>,
+    error: <Object || null>,
+  },
+  routing: <react-router-redux>,
+  signup: {
+    isFetching: <bool>,
+    error: <Object || null>,
+  },
+}
+```
 
-======================================
-
+For `<redux-form>` and `<react-router-redux>`, you should use the reducers built into those packages. Everything else will be custom-written by you.
 
 ## License
 
