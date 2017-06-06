@@ -25,6 +25,13 @@ export const testLogin = {
   error: {},
 };
 
+export const testMatch = {
+  isExact: false,
+  params: {},
+  path: '/customers',
+  url: '/customers',
+};
+
 export const testPagination = {
   total: 14,
   limit: 10,

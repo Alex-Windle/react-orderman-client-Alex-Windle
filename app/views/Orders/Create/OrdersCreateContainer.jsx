@@ -41,7 +41,7 @@ import {
  *
  * @extends Component
  */
-class OrdersCreateContainer extends Component {
+export class OrdersCreateContainer extends Component {
   constructor(props) {
     super(props);
 

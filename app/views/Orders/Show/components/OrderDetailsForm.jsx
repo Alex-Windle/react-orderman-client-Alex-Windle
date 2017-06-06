@@ -25,7 +25,7 @@ import SuccessButton from '../../../common/buttons/SuccessButton';
  *
  * @extends Component
  */
-class OrderDetailsForm extends Component {
+export class OrderDetailsForm extends Component {
   render() {
     const {
       handleSubmit,

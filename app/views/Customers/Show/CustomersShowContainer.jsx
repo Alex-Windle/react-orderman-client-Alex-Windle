@@ -43,7 +43,7 @@ import {
  *
  * @extends Component
  */
-class CustomersShowContainer extends Component {
+export class CustomersShowContainer extends Component {
   constructor(props) {
     super(props);
 

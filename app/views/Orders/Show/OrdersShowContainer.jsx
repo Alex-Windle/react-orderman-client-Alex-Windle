@@ -42,7 +42,7 @@ import {
  *
  * @extends Component
  */
-class OrdersShowContainer extends Component {
+export class OrdersShowContainer extends Component {
   constructor(props) {
     super(props);
 

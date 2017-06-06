@@ -33,7 +33,7 @@ import SuccessButton from '../../common/buttons/SuccessButton';
  *
  * @extends Component
  */
-class SignupForm extends Component {
+export class SignupForm extends Component {
   render() {
     const {
       handleSubmit,

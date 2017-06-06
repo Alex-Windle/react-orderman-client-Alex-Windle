@@ -33,7 +33,7 @@ import SuccessButton from '../../common/buttons/SuccessButton';
  *
  * @extends Component
  */
-class LoginForm extends Component {
+export class LoginForm extends Component {
   render() {
     const {
       handleSubmit,
