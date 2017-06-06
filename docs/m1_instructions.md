@@ -41,7 +41,7 @@ You should use this guide when you are completing Milestone 1.
 nvm use
 ```
 
-2. Install dependencies and start the developent server
+2. Install dependencies and start the development server
 
 ```bash
 yarn

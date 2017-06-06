@@ -12,7 +12,7 @@ When you are done with this milestone, you should have
 * Integrated Redux with your Login and Signup form via `redux-form`
  * Working Signup
  * Working Login
- * Setup a common layut for authenticated pages
+ * Setup a common layout for authenticated pages
  * CRUD Actions on Customers Models
 
 ## When to Use This Guide
@@ -44,7 +44,7 @@ You should use this guide when you are completing Milestone 2.
 nvm use
 ```
 
-4. Install dependencies and start the developent server for this repo
+4. Install dependencies and start the development server for this repo
 
 ```bash
 yarn
@@ -133,7 +133,7 @@ Use the *Application Structure* above to create several new files. Again, don't 
 
 * `Customers/Create/actions/customersCreateActions.jsx` - *Redux-Thunk Actions that POST to /customers.*
 
-* `Customers/Create/reducers/customersShowReducers.jsx` - *Redux reducers that track the state of the customers create requests.*
+* `Customers/Create/reducers/customersCreateReducers.jsx` - *Redux reducers that track the state of the customers create requests.*
 
 * `Customers/Create/CustomersCreateContainer.jsx` - *Connected Component that represents creating a single customer. Renders an `AuthenticatedLayout`, `CustomerDetailsForm` without initialValues.*
 
