@@ -13,9 +13,9 @@ import PropTypes from 'prop-types';
 
 
 export const ErrorPropType = PropTypes.shape({
-  message: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  status: PropTypes.number.isRequired,
+  message: PropTypes.string,
+  name: PropTypes.string,
+  status: PropTypes.number,
 });
 
 

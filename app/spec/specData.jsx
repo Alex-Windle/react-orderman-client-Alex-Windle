@@ -20,6 +20,11 @@ export const testError = {
   status: 500,
 };
 
+export const testLogin = {
+  isFetching: false,
+  error: {},
+};
+
 export const testPagination = {
   total: 14,
   limit: 10,
@@ -38,3 +43,9 @@ export const testOrder = {
   __v: 0,
   status: 'SCHEDULED',
 };
+
+export const testSignup = {
+  isFetching: false,
+  error: {},
+};
+

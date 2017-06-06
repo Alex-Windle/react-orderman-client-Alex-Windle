@@ -44,7 +44,7 @@ import {
  *   LoginForm or SignupForm depending on Route
  *
  */
-class UnauthenticatedContainer extends Component {
+export class UnauthenticatedContainer extends Component {
   constructor(props) {
     super(props);
 
@@ -66,11 +66,11 @@ class UnauthenticatedContainer extends Component {
       login,
       signup,
     } = this.props;
-
     return (
       <UnauthenticatedLayout>
         <Switch>
           <Route
+            exact
             path="/login"
             render={props =>
               (<LoginForm
@@ -88,6 +88,16 @@ class UnauthenticatedContainer extends Component {
                 {...props}
                 loading={signup.isFetching}
                 handleSubmit={this.signup}
+              />)
+            }
+          />
+          <Route
+            path="/"
+            render={props =>
+              (<LoginForm
+                {...props}
+                loading={login.isFetching}
+                handleSubmit={this.login}
               />)
             }
           />
