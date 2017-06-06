@@ -109,6 +109,14 @@ Use the *Application Structure* above to create several new files. Again, don't 
 
 * `Unauthenticated/reducers/authReducer.jsx` - *Redux reducer that tracks authentication state. On initialization, it should check localStorage for the stored JWT, and set that in the initialState of the reducer.*
 
+* `Customers/Index/actions/customersIndexActions.jsx` - *Redux-Thunk Actions that GET to /customers.*
+
+* `Customers/Index/reducers/customersIndexReducers.jsx` - *Redux reducers that track the state of the customers index requests.*
+
+* `Customers/components/OrdersTable.jsx` - *Table rendering rows of Customer data. Also renders a `Pagination` component that responds to page change events.*
+
+* `Customers/Index/CustomersIndexContainer.jsx` - *Connected Component that represents a list of Customers. Renders an `AuthenticatedLayout`, `SearchBar`, `SuccessButton`, and `CustomersTable`.*
+
 * `Customers/CustomersContainer.jsx` - *A container that manages routing of Customers paths.. It renders a `Switch` from `react-router-dom` as well as three `Route`s, one pointing to `/customers` (renders `CustomersIndexContainer`), one pointing to `/customers/create` (renders `CustomersCreateContainer`), and one pointing to `/customers/:id` (renders `CustomersShowContainer`).
 
 
