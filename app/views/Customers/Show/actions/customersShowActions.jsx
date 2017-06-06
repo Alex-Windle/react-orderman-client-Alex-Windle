@@ -34,7 +34,7 @@ const receiveCustomersShowFailure = error => ({
 export const performRetrieveCustomer = id =>
   (dispatch) => {
     dispatch(requestCustomersShowAction());
-    get(`/customers/${id}`)
+    return get(`/customers/${id}`)
       .then((response) => {
         dispatch(receiveCustomersShowSuccess(response.customer));
       })
@@ -46,7 +46,7 @@ export const performRetrieveCustomer = id =>
 export const performUpdateCustomer = (id, updates) =>
   (dispatch) => {
     dispatch(requestCustomersShowAction());
-    patch(`/customers/${id}`, updates)
+    return patch(`/customers/${id}`, updates)
       .then((response) => {
         dispatch(receiveCustomersShowSuccess(response.customer));
       })

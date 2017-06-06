@@ -30,7 +30,7 @@ export const getHeaders = () => {
 };
 
 
-export const BASE_URL = process.env.API_BASE;
+export const BASE_URL = process.env.API_BASE || 'http://localhost:3000';
 
 
 const baseError = {
@@ -38,6 +38,7 @@ const baseError = {
   message: 'Something went wrong. Please refresh and try again.',
   status: 500,
 };
+
 
 export const axiosInstance = axios.create({
   baseURL: BASE_URL,

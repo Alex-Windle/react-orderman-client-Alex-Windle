@@ -36,7 +36,7 @@ const receiveCustomersCreateFailure = error => ({
 export const performCustomersCreateAction = params =>
   (dispatch) => {
     dispatch(requestCustomersCreateAction());
-    post('/customers', params)
+    return post('/customers', params)
       .then(() => {
         dispatch(receiveCustomersCreateSuccess());
         history.push('/customers');

@@ -38,7 +38,7 @@ export const performCustomersIndexSearch = (page = 1, searchTerm) =>
     dispatch(requestCustomersIndexAction());
     const basePath = `/customers?page=${page}`;
     const path = searchTerm ? `${basePath}&searchTerm=${searchTerm}` : basePath;
-    get(path)
+    return get(path)
       .then((response) => {
         const pagination = {
           total: response.total,
