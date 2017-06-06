@@ -56,7 +56,7 @@ If everything is running correctly, you should see the phrase "You know what to 
 We use a feature-focused organization for our app where our directories represent the different pages of the application.
 
  <p align="center">
-   <img src="../logo/Master_App_Structure.png">
+   <img src="../logo/M1_Complete_App_Structure.png">
  </p>
  
  ## Instructions to Complete M1
@@ -93,9 +93,6 @@ Use the *Application Structure* above to create several new files.
 
 `Logo.jsx` - *Reusable component to display a Logo (image)*
 
-|Prop |Type |
-|------|------|
-
 `LoginForm.jsx` - *A form component that renders email and password text inputs, as well as a `SuccessButton`. Also contains a `Link` from `react-router-dom` that links to the */signup* route.*
 
 |Prop |Type |
@@ -115,9 +112,6 @@ Use the *Application Structure* above to create several new files.
 |handleSubmit |func |
 
 `Routes.jsx` - *A container that renders several components from `react-router-dom` that controls routing. In this milestone, `Routes` will render a simple `Router` with a `history` object created using `history/createHashHistory`, a `Switch`, and a `Route` that renders an `UnauthenticatedContainer`.*
-
-|Prop |Type |
-|------|------|
 
 **Update `boot.jsx`**
 
