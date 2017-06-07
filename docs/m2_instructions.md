@@ -21,16 +21,15 @@ You should use this guide when you are completing Milestone 2.
 
 ## Overview
 
-* [Goals](#goals)
 * [Reference Solution](#reference-solution)
 * [Setup](#setup)
 * [Guide](#guide)
 
 ## Reference Solution
 
-**If you need further help completing Milestone 2, please reference our solution in the [`m2_complete`](https://github.com/TalkRise/React_OrderMan/tree/m1_complete) branch of this repo.**
+**If you need further help completing Milestone 2, please reference our solution in the [`m2_complete`](https://github.com/TalkRise/React_OrderMan/tree/m2_complete) branch of this repo.**
 
-[Milestone 2 Demo](https://react-orderman-m1.herokuapp.com/#/)
+[Milestone 2 Demo](https://react-orderman-m2.herokuapp.com/#/)
   
 ## Setup
 
@@ -50,8 +49,6 @@ nvm use
 yarn
 npm run dev
 ```
-
-If everything is running correctly, you should see the phrase "You know what to do" in your browser.
 
 ## Application Structure
 
@@ -77,7 +74,7 @@ yarn add redux react-redux react-router-redux@next redux-form redux-thunk
 
 Use the *Application Structure* above to create several new files. Again, don't freak out, we'll guide through. 
 
-* `store/rootReducer.jsx` - *File to create and combine Redux reducers. Start with the `routerReducer` from `react-router-redux` and the `form-reducer` from `redux-form`.*
+* `store/rootReducer.jsx` - *File to create and combine Redux reducers. Start with the `routerReducer` from `react-router-redux` and the `formReducer` from `redux-form`.*
 
 * `store/configureStore.jsx` - *Create and export a Redux store with `redux-thunk` middleware, `react-router-redux` middleware, and the Redux DevTools.*
 
