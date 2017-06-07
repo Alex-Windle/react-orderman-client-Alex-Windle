@@ -55,4 +55,3 @@ export const testSignup = {
   isFetching: false,
   error: {},
 };
-
