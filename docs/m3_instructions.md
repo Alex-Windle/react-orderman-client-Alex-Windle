@@ -3,7 +3,7 @@
 </p>
 
 # TalkRise OrderMan Milestone 3
-These are the docs for Milestone 3 of this project. They are meant to tell you *what* to do, but not *how* to do it in great detail. If you need additional help, see the reference solution by checking out branch [`m3_complete`](https://github.com/TalkRise/React_OrderMan/tree/m2_complete), or feel free to ask your instructor or other students.
+These are the docs for Milestone 3 of this project. They are meant to tell you *what* to do, but not *how* to do it in great detail. If you need additional help, see the reference solution by checking out branch [`m3_complete`](https://github.com/TalkRise/React_OrderMan/tree/m3_complete), or feel free to ask your instructor or other students.
 
 When you are done with this milestone, you should have
 
@@ -16,16 +16,15 @@ You should use this guide when you are completing Milestone 3.
 
 ## Overview
 
-* [Goals](#goals)
 * [Reference Solution](#reference-solution)
 * [Setup](#setup)
 * [Guide](#guide)
 
 ## Reference Solution
 
-**If you need further help completing Milestone 3, please reference our solution in the [`m3_complete`](https://github.com/TalkRise/React_OrderMan/tree/m1_complete) branch of this repo.**
+**If you need further help completing Milestone 3, please reference our solution in the [`m3_complete`](https://github.com/TalkRise/React_OrderMan/tree/m3_complete) branch of this repo.**
 
-[Milestone 3 Demo](https://react-orderman-m1.herokuapp.com/#/)
+[Milestone 3 Demo](https://react-orderman-m3.herokuapp.com/#/)
   
 ## Setup
 
@@ -46,8 +45,6 @@ yarn
 npm run dev
 ```
 
-If everything is running correctly, you should see the phrase "You know what to do" in your browser.
-
 ## Application Structure
 
 We use a feature-focused organization for our app where our directories represent the different pages of the application.
@@ -58,7 +55,7 @@ Test files are purposefully not included in the diagram below.
    <img src="../logo/M3_Complete_App_Structure.png">
  </p>
  
-We only added a few components here! We're essentially replicating the *Customers* components for the *Orders* model this time.
+Aside from tests, we only added a few components here! We're essentially replicating the *Customers* components for the *Orders* model this time.
  
  ## Instructions to Complete M3
  
