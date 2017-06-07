@@ -20,7 +20,6 @@ You should use this guide when you are completing Milestone 1.
 
 ## Overview
 
-* [Goals](#goals)
 * [Reference Solution](#reference-solution)
 * [Setup](#setup)
 * [Guide](#guide)
@@ -80,9 +79,7 @@ Use the *Application Structure* above to create several new files.
 
 * `Logo.jsx` - *Reusable component to display a Logo (image)*
 
-* `LoginForm.jsx` - *A form component that renders email and password text inputs, as well as a `SuccessButton`. Also contains a 
-
-* `Link` from `react-router-dom` that links to the */signup* route.*
+* `LoginForm.jsx` - *A form component that renders email and password text inputs, as well as a `SuccessButton`. Also contains a *`Link` from `react-router-dom` that links to the */signup* route.*
 
 * `SignupForm.jsx` - *A form component that renders email and password text inputs, as well as a `SuccessButton`. Also contains a `Link` from `react-router-dom` that links to the */login* route.*
 
