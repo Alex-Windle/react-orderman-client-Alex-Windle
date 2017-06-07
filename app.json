@@ -1,7 +1,7 @@
 {
   "name": "TalkRise OrderMan",
   "description": "Project used as a part of the TalkRise React Course. Manages Customer Orders.",
-  "repository": "https://github.com/talkrise/React_OrderMan",
+  "repository": "https://github.com/talkrise/React_OrderMan_Client",
   "keywords": [
     "react",
     "redux",
