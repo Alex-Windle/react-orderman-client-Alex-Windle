@@ -71,6 +71,7 @@ class UnauthenticatedContainer extends Component {
       <UnauthenticatedLayout>
         <Switch>
           <Route
+            exact
             path="/login"
             render={props =>
               (<LoginForm
@@ -88,6 +89,16 @@ class UnauthenticatedContainer extends Component {
                 {...props}
                 loading={signup.isFetching}
                 handleSubmit={this.signup}
+              />)
+            }
+          />
+          <Route
+            path="/"
+            render={props =>
+              (<LoginForm
+                {...props}
+                loading={login.isFetching}
+                handleSubmit={this.login}
               />)
             }
           />
