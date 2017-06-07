@@ -3,7 +3,7 @@
 </p>
 
 # TalkRise OrderMan Milestone 3
-These are the docs for Milestone 3 of this project. They are meant to tell you *what* to do, but not *how* to do it in great detail. If you need additional help, see the reference solution by checking out branch [`m3_complete`](https://github.com/TalkRise/React_OrderMan/tree/m3_complete), or feel free to ask your instructor or other students.
+These are the docs for Milestone 3 of this project. They are meant to tell you *what* to do, but not *how* to do it in great detail. If you need additional help, see the reference solution by checking out branch [`m3_complete`](https://github.com/TalkRise/React_OrderMan_Client/tree/m3_complete), or feel free to ask your instructor or other students.
 
 When you are done with this milestone, you should have
 
@@ -22,7 +22,7 @@ You should use this guide when you are completing Milestone 3.
 
 ## Reference Solution
 
-**If you need further help completing Milestone 3, please reference our solution in the [`m3_complete`](https://github.com/TalkRise/React_OrderMan/tree/m3_complete) branch of this repo.**
+**If you need further help completing Milestone 3, please reference our solution in the [`m3_complete`](https://github.com/TalkRise/React_OrderMan_Client/tree/m3_complete) branch of this repo.**
 
 [Milestone 3 Demo](https://react-orderman-m3.herokuapp.com/#/)
   
