@@ -15,9 +15,9 @@ import SuccessButton from '../../common/buttons/SuccessButton';
 
 
 /**
- * SignupForm represents the form to register Users (system admins)
- *
- * @description Form with two inputs and a link
+ * @class SignupForm represents
+ * @description The form to register Users (system admins)
+ * Contains two inputs and a link
  *   input of type "email"
  *   input of type "password"
  *   Link from "react-router-dom" that routes to the "/login" route for the LoginForm

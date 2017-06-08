@@ -16,9 +16,9 @@ import UnauthenticatedLayout from '../common/layouts/UnauthenticatedLayout';
 
 
 /**
- * UnauthenticatedContainer is a routing container for unauthenticated components
+ * @class UnauthenticatedContainer
+ * @description Routing container for unauthenticated components
  * like Login and Signup.
- *
  * @description Here, we're rendering an UnauthenticatedLayout which shows a Logo on
  * top, and then renders "children" passed into it. In this case, the "children" are
  * two Routes:
