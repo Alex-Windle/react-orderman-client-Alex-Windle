@@ -10,8 +10,7 @@ import logoImage from '../../../assets/logo.png';
 
 
 /**
- * Logo represents the OrderMan project logo
- *
+ * @class Logo
  * @description Renders a Bootstrap responsive image
  *
  */

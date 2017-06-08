@@ -14,10 +14,9 @@ import Logo from '../logos/Logo';
 
 
 /**
- * UnauthenticatedLayout represents a reusable layout to reuse on your
+ * @class UnauthenticatedLayout
+ * @description Reusable layout to reuse on your
  * unauthenticated pages like Signup and Login
- *
- * @description Renders children passed into this component
  *
  */
 export default class UnauthenticatedLayout extends Component {
