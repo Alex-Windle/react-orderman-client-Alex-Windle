@@ -10,18 +10,8 @@ import PropTypes from 'prop-types';
 
 
 /**
- * SuccessButton is a button used for success-type actions.
+ * SuccessButton represents a reusable button used for success-type actions.
  *
- * @description Renders a Bootstrap button
- *
- * PROPS:
- *   block {bool} - If button is a 'btn-block'
- *   disabled {bool} - If the button is disabled
- *   loading {bool} - If the button is loading
- *   title {string} - Button title
- *   onClick {func} - Button onClick handler
- *
- * @extends Component
  */
 export default class SuccessButton extends Component {
   render() {
@@ -29,8 +19,8 @@ export default class SuccessButton extends Component {
       block,
       disabled,
       loading,
-      title,
       onClick,
+      title,
     } = this.props;
 
     return (

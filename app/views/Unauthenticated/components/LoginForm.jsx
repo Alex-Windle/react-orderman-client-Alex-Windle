@@ -17,15 +17,11 @@ import SuccessButton from '../../common/buttons/SuccessButton';
 /**
  * LoginForm represents the form to authenticate Users (system admins)
  *
- * @description Renders:
- *   email input
- *   password input
- *   SuccessButton
+ * @description Form with two inputs and a link
+ *   input of type "email"
+ *   input of type "password"
+ *   Link from "react-router-dom" that routes to the "/" route for the SignupForm
  *
- * PROPS:
- *   handleSubmit {func} onSubmit function for form
- *
- * @extends Component
  */
 export default class LoginForm extends Component {
   render() {
