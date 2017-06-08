@@ -37,23 +37,36 @@ import {
 
 
 /**
- * UnauthenticatedContainer is a wrapper for the Login and Signup pages of this app.
+ * UnauthenticatedContainer is a routing container for unauthenticated components
+ * like Login and Signup.
  *
- * @description Renders:
- *   UnauthenticatedLayout
- *   LoginForm or SignupForm depending on Route
+ * @description Here, we're rendering an UnauthenticatedLayout which shows a Logo on
+ * top, and then renders "children" passed into it. In this case, the "children" are
+ * two Routes:
+ *   "/login" renders the LoginForm
+ *   "/" renders the SignupForm
  *
  */
 class UnauthenticatedContainer extends Component {
   constructor(props) {
     super(props);
 
+
+    /**
+     * onSubmit handler for the LoginForm
+     * @param event
+     */
     this.signup = (event) => {
       event.preventDefault();
       const { values } = this.props.signupForm;
       this.props.performSignup(values);
     };
 
+
+    /**
+     * onSubmit handler for the SignupForm
+     * @param event
+     */
     this.login = (event) => {
       event.preventDefault();
       const { values } = this.props.loginForm;

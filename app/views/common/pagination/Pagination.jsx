@@ -10,12 +10,8 @@ import PropTypes from 'prop-types';
 
 
 /**
- * Pagination represents a pagination component to move through pages in a
- * list or table
- *
- * @description Renders a Bootstrap pagination component
- *
- * @extends Component
+ * @class Pagination
+ * @description Pagination component to page through lists or tables
  */
 export default class Pagination extends Component {
   render() {

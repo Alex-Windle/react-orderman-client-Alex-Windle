@@ -11,12 +11,10 @@ import React, { Component } from 'react';
 // Custom imports
 import { history } from '../../Routes';
 
+
 /**
- * BackButton is a button used for back actions.
- *
- * @description Renders a Bootstrap button that can have:
- *
- * @extends Component
+ * @class BackButton
+ * @description A reusable button used to navigate backward
  */
 export default class BackButton extends Component {
   render() {

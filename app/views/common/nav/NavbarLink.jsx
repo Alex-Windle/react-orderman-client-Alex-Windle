@@ -11,15 +11,17 @@ import { Link } from 'react-router-dom';
 
 
 /**
- * NavbarLink represents a link in the Navbar of the application.
- *
- * @description NavbarLink renders a React-Router Link component in a standardized way.
- *
- * @extends Component
+ * @class NavbarLink
+ * @description A link that sits in the Navbar to route to different pages
  */
 export default class NavbarLink extends Component {
   render() {
-    const { pathname, path, title } = this.props;
+    const {
+      path,
+      pathname,
+      title,
+    } = this.props;
+
     return (
       <li className={pathname === path ? 'active' : ''}>
         <Link to={path}>{title}</Link>

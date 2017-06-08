@@ -20,15 +20,9 @@ import { performClearAuth } from '../../Unauthenticated/actions/loginActions';
 
 
 /**
- * Navbar represents the header navigation bar for the app.
+ * @class Navbar
+ * @description A header for the application
  *
- * @description Renders the default Bootstrap nav bar with a page title
- * in the top left, and 3 NavbarLinks components in the top right:
- *   Customers
- *   Orders
- *   Log Out
- *
- * @extends Component
  */
 export class Navbar extends Component {
   constructor(props) {
@@ -79,11 +73,6 @@ export class Navbar extends Component {
                 title="Customers"
                 path="/customers"
               />
-              <NavbarLink
-                pathname={pathname}
-                title="Orders"
-                path="/orders"
-              />
               <li>
                 <a
                   role="button"
@@ -118,5 +107,6 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = () => ({
   performClearAuth,
 });
+
 
 export default connect(mapStateToProps, mapDispatchToProps())(Navbar);

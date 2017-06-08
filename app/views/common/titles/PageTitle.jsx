@@ -10,13 +10,8 @@ import PropTypes from 'prop-types';
 
 
 /**
- * PageTitle represents a title at the top of each authenticated page that
- * tells the user where they are.
- *
- * @description Renders a heading element that takes:
- *   title
- *
- * @extends Component
+ * @class PageTitle
+ * @description Reusable title to use for pages. Sits in AuthenticatedLayout
  */
 export default class PageTitle extends Component {
   render() {

@@ -14,17 +14,11 @@ import Logo from '../logos/Logo';
 
 
 /**
- * UnauthenticatedLayout gives you a layout to reuse on your
+ * UnauthenticatedLayout represents a reusable layout to reuse on your
  * unauthenticated pages like Signup and Login
  *
- * @description Renders:
- *   Logo
- *   children (passed in as prop)
+ * @description Renders children passed into this component
  *
- * PROPS:
- *   children {element} React Element
- *
- * @extends Component
  */
 export default class UnauthenticatedLayout extends Component {
   render() {

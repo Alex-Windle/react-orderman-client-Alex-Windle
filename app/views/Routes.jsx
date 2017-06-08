@@ -8,14 +8,12 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
+import createHashHistory from 'history/createHashHistory';
 
 import {
   Route,
   Switch,
 } from 'react-router-dom';
-
-
-import createHashHistory from 'history/createHashHistory';
 
 
 // Component imports
@@ -36,10 +34,12 @@ export const history = createHashHistory();
 /**
  * Class representing the client-side router for the app
  *
- * @description Depending on the route shown, a different component should
- * be rendered. These components we render are the "pages" of our app.
+ * @description Different components should be rendered depending on route.
+ * These components we render are the "pages" of our app.
  *
- * @extends Component
+ * Here we're not using an "exact" match route, so any route starting with "/" will render
+ * the UnauthenticatedContainer.
+ *
  */
 export default class Routes extends Component {
   render() {
