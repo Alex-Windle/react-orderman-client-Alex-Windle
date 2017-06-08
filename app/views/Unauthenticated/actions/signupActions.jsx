@@ -14,16 +14,29 @@ export const RECEIVE_SIGNUP_SUCCESS = 'RECEIVE_SIGNUP_SUCCESS';
 export const RECEIVE_SIGNUP_FAILURE = 'RECEIVE_SIGNUP_FAILURE';
 
 
+/**
+ * @function requestSignupAction
+ * @description Action-creator
+ */
 const requestSignupAction = () => ({
   type: REQUEST_SIGNUP_ACTION,
 });
 
 
+/**
+ * @function receiveSignupSuccess
+ * @description Action-creator
+ */
 const receiveSignupSuccess = () => ({
   type: RECEIVE_SIGNUP_SUCCESS,
 });
 
 
+/**
+ * @function receiveSignupFailure
+ * @description Action-creator
+ * @param error
+ */
 const receiveSignupFailure = error => ({
   type: RECEIVE_SIGNUP_FAILURE,
   payload: {
@@ -32,6 +45,11 @@ const receiveSignupFailure = error => ({
 });
 
 
+/**
+ * @function performSignup
+ * @description POST /users/register to Register a User
+ * @param credentials
+ */
 export const performSignup = credentials =>
   (dispatch) => {
     dispatch(requestSignupAction());

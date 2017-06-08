@@ -16,12 +16,11 @@ import CustomersShowContainer from './Show/CustomersShowContainer';
 
 
 /**
- * CustomersContainer is a wrapper for the Customers pages of this app
- *
- * @description Renders:
- *   AuthenticatedLayout
- *   CustomersIndex, CustomersShow, or CustomersCreate depending on Route
- *
+ * @class CustomersContainer
+ * @description Routing container for pertinent Customers routes
+ *   "/customers/create" exact Route renders the CustomersCreateContainer
+ *   "/customers/:id" exact Route renders the CustomersShowContainer
+ *   "/customers" Route renders the CustomersIndexContainer
  */
 export default class CustomersContainer extends Component {
   render() {

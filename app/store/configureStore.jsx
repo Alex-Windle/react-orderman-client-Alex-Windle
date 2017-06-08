@@ -24,8 +24,7 @@ import rootReducer from './rootReducer';
 
 
 /**
- * @description Exports the created Redux Store with
- * Thunk Middleware and Redux DevTools
+ * @exports The created Redux Store with Thunk Middleware and Redux DevTools
  */
 export default createStore(rootReducer, {}, compose(
   applyMiddleware(

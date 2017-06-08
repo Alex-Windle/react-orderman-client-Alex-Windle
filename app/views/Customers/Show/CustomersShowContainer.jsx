@@ -31,18 +31,29 @@ import {
 
 
 /**
- * CustomersShowContainer represents a page with a list of all Customers for a given admin
- *
- * @extends Component
+ * @class CustomersShowContainer
+ * @description Container for Customer Display and Updates
  */
 class CustomersShowContainer extends Component {
   constructor(props) {
     super(props);
 
+
+    /**
+     * @function retrieveCustomer
+     * @description Retrieves a specific customer by ID
+     * @param id
+     */
     this.retrieveCustomer = (id) => {
       this.props.performRetrieveCustomer(id);
     };
 
+
+    /**
+     * @function handleSubmit
+     * @description Submit handler for Customer updates
+     * @param e
+     */
     this.handleSubmit = (e) => {
       e.preventDefault();
       const { values } = this.props.customerDetailsForm;
@@ -50,9 +61,11 @@ class CustomersShowContainer extends Component {
     };
   }
 
+
   componentWillMount() {
     this.retrieveCustomer(this.props.match.params.id);
   }
+
 
   render() {
     const {

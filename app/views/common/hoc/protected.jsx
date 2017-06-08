@@ -22,7 +22,6 @@ import {
 /**
  * @description HOC to detect authentication status and route accordingly
  * Requires a user to be authenticated in order to access the component
- *
  */
 export default (BaseComponent) => {
   class Protected extends Component {

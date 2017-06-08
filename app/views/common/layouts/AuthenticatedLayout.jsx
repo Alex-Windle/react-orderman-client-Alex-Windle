@@ -18,7 +18,6 @@ import PageTitle from '../titles/PageTitle';
 /**
  * @class UnauthenticatedLayout
  * @description A reusable layout for your authenticated pages like Customers and Orders
- *
  */
 export default class AuthenticatedLayout extends Component {
   render() {

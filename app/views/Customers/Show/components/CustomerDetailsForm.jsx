@@ -16,14 +16,9 @@ import SuccessButton from '../../../common/buttons/SuccessButton';
 
 
 /**
- * CustomerDetailsForm represents a form showing Customer details
- *
- * @description Renders a SuccessButton and several fields
- *   first_name
- *   last_name
- *   email
- *
- * @extends Component
+ * @class CustomerDetailsForm
+ * @description Form for handling Customer details
+ * @description Used for both creating new Customers and updating existing Customers
  */
 class CustomerDetailsForm extends Component {
   render() {
@@ -82,6 +77,12 @@ CustomerDetailsForm.propTypes = {
 CustomerDetailsForm.defaultProps = {};
 
 
+/**
+ * @function validate
+ * @description Function to check for proper values in the connected form
+ * @param values
+ * @returns {{}}
+ */
 const validate = (values) => {
   const errors = {};
 

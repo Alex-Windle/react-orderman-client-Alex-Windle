@@ -38,14 +38,10 @@ import {
 
 /**
  * @class UnauthenticatedContainer
- * @description Routing container for unauthenticated components
- * like Login and Signup.
- * @description Here, we're rendering an UnauthenticatedLayout which shows a Logo on
- * top, and then renders "children" passed into it. In this case, the "children" are
- * two Routes:
- *   "/login" renders the LoginForm
- *   "/" renders the SignupForm
- *
+ * @description Routing container for pertinent Unauthenticated routes
+ *   "/login" exact Route renders the LoginForm
+ *   "/signup" exact Route renders the SignupForm
+ *   "/" Route renders the LoginForm
  */
 class UnauthenticatedContainer extends Component {
   constructor(props) {
@@ -83,17 +79,6 @@ class UnauthenticatedContainer extends Component {
     return (
       <UnauthenticatedLayout>
         <Switch>
-          <Route
-            exact
-            path="/login"
-            render={props =>
-              (<LoginForm
-                {...props}
-                loading={login.isFetching}
-                handleSubmit={this.login}
-              />)
-            }
-          />
           <Route
             exact
             path="/signup"

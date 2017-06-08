@@ -22,7 +22,6 @@ import {
 /**
  * @description HOC to detect authentication status and route accordingly
  * Requires a user to be unauthenticated in order to access the component
- *
  */
 export default (BaseComponent) => {
   class NotProtected extends Component {

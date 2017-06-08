@@ -36,9 +36,10 @@ export const history = createHashHistory();
  * @description The client-side router for the app
  * @description Different components should be rendered depending on route.
  * These components we render are the "pages" of our app.
- * @description We're not using an "exact" match route, so any route starting with "/" will render
- * the UnauthenticatedContainer.
- *
+ * @description We're not using an "exact" match route, so
+ *   any route starting with "/customers" will render the CustomersContainer, protected by an HOC
+ *   any route starting with anything other than "/customers"
+ *     will rnder the UnauthenticatedContainer, protected by an HOC
  */
 export default class Routes extends Component {
   render() {

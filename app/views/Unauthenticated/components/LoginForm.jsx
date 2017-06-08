@@ -21,13 +21,12 @@ import SuccessButton from '../../common/buttons/SuccessButton';
 
 
 /**
- * @class LoginForm represents
- * @description The form to authenticate Users (system admins)
- * Contains two inputs and a link
- *   input of type "email"
- *   input of type "password"
- *   Link from "react-router-dom" that routes to the "/" route for the SignupForm
- *
+ * @class LoginForm
+ * @description Connected ReduxForm
+ *   Email Field
+ *   Password Field
+ *   SuccessButton
+ *   Link to /signup
  */
 class LoginForm extends Component {
   render() {
@@ -93,6 +92,12 @@ LoginForm.propTypes = {
 LoginForm.defaultProps = {};
 
 
+/**
+ * @function validate
+ * @description Validate fields in the form
+ * @param values
+ * @returns {{}}
+ */
 const validate = (values) => {
   const errors = {};
   if (!values.email) {

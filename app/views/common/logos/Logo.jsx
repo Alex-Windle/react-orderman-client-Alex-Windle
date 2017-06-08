@@ -12,7 +12,6 @@ import logoImage from '../../../assets/logo.png';
 /**
  * @class Logo
  * @description Renders a Bootstrap responsive image
- *
  */
 export default class Logo extends Component {
   render() {

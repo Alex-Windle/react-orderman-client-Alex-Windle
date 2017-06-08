@@ -13,7 +13,6 @@ import { debounce } from 'lodash';
 /**
  * @class SearchBar
  * @description Represents an input that responds and debounces onChange events
- *
  */
 export default class SearchBar extends Component {
   constructor(props) {

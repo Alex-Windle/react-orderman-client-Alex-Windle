@@ -22,7 +22,6 @@ import { performClearAuth } from '../../Unauthenticated/actions/loginActions';
 /**
  * @class Navbar
  * @description A header for the application
- *
  */
 export class Navbar extends Component {
   constructor(props) {

@@ -12,7 +12,6 @@ import PropTypes from 'prop-types';
 /**
  * @class SuccessButton
  * @description Reusable button used for success-type actions
- *
  */
 export default class SuccessButton extends Component {
   render() {
