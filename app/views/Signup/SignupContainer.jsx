@@ -11,11 +11,6 @@ import React, { Component } from 'react';
 /**
  * SignupContainer represents the Signup page of the application.
  *
- * @description This pages is the connected container that renders:
- *   SignupForm
- *   Link to /login
- *
- * @extends Component
  */
 export default class SignupContainer extends Component {
   render() {
