@@ -11,11 +11,21 @@ export const RECEIVE_ORDERS_INDEX_SUCCESS = 'RECEIVE_ORDERS_INDEX_SUCCESS';
 export const RECEIVE_ORDERS_INDEX_FAILURE = 'RECEIVE_ORDERS_INDEX_FAILURE';
 
 
+/**
+ * @function requestOrdersIndexAction
+ * @description Action-creator
+ */
 const requestOrdersIndexAction = () => ({
   type: REQUEST_ORDERS_INDEX_ACTION,
 });
 
 
+/**
+ * @function receiveOrdersIndexSuccess
+ * @description Action-creator
+ * @param orders
+ * @param pagination
+ */
 const receiveOrdersIndexSuccess = (orders, pagination) => ({
   type: RECEIVE_ORDERS_INDEX_SUCCESS,
   payload: {
@@ -25,6 +35,11 @@ const receiveOrdersIndexSuccess = (orders, pagination) => ({
 });
 
 
+/**
+ * @function receiveOrdersIndexFailure
+ * @description Action-creator
+ * @param error
+ */
 const receiveOrdersIndexFailure = error => ({
   type: RECEIVE_ORDERS_INDEX_FAILURE,
   payload: {
@@ -32,6 +47,14 @@ const receiveOrdersIndexFailure = error => ({
   },
 });
 
+
+/**
+ * @function performOrdersIndexAction
+ * @description GET /orders to retrieve Orders
+ * @param page
+ * @param searchTerm
+ * @param customer_id
+ */
 export const performOrdersIndexAction = (page = 1, searchTerm, customer_id) =>
   (dispatch) => {
     dispatch(requestOrdersIndexAction());

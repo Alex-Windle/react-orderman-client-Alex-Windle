@@ -1,3 +1,9 @@
+/**
+ * GENERAL NOTES
+ * @author TalkRise <admin@talkrise.com>
+ * @description Jest setup file for mocking dependencies.
+ */
+
 class LocalStorageMock {
   constructor() {
     this.store = {};

@@ -21,17 +21,12 @@ import SuccessButton from '../../common/buttons/SuccessButton';
 
 
 /**
- * LoginForm represents the form to authenticate Users (system admins)
- *
- * @description Renders:
- *   email input
- *   password input
+ * @class LoginForm
+ * @description Connected ReduxForm
+ *   Email Field
+ *   Password Field
  *   SuccessButton
- *
- * PROPS:
- *   handleSubmit {func} onSubmit function for form
- *
- * @extends Component
+ *   Link to /signup
  */
 export class LoginForm extends Component {
   render() {
@@ -97,6 +92,12 @@ LoginForm.propTypes = {
 LoginForm.defaultProps = {};
 
 
+/**
+ * @function validate
+ * @description Validate fields in the form
+ * @param values
+ * @returns {{}}
+ */
 const validate = (values) => {
   const errors = {};
   if (!values.email) {

@@ -26,17 +26,19 @@ import {
 
 
 /**
- * CustomersCreateContainer represents a page to create a Customer
- *
- * @description Renders:
- *   CustomerDetailsForm (we're reusing this component from CustomersShow!)
- *
- * @extends Component
+ * @class CustomersCreateContainer
+ * @description Container for Customer creation
  */
 export class CustomersCreateContainer extends Component {
   constructor(props) {
     super(props);
 
+
+    /**
+     * @function createCustomer
+     * @description Fires performCustomersCreateAction
+     * @param e
+     */
     this.createCustomer = (e) => {
       e.preventDefault();
       const { values } = this.props.customersCreateForm;

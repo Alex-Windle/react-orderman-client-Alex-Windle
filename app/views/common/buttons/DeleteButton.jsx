@@ -10,13 +10,8 @@ import PropTypes from 'prop-types';
 
 
 /**
- * DeleteButton is a button used for edit-type actions.
- *
- * @description Renders a Bootstrap button that can have:
- *
- * This button also injects it's own onClick logic to confirm the action.
- *
- * @extends Component
+ * @class DeleteButton
+ * @description Button indicating a Delete action.
  */
 export default class DeleteButton extends Component {
   constructor(props) {

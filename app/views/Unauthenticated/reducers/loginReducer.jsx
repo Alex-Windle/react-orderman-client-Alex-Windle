@@ -18,6 +18,12 @@ export const initialState = {
 };
 
 
+/**
+ * @description Reducer for login
+ * @param reduxState
+ * @param action
+ * @returns {*}
+ */
 export default (reduxState = initialState, action) => {
   const { type, payload } = action;
   switch (type) {

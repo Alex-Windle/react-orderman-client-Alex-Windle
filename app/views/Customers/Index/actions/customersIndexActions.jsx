@@ -12,11 +12,21 @@ export const RECEIVE_CUSTOMERS_INDEX_SUCCESS = 'RECEIVE_CUSTOMERS_INDEX_SUCCESS'
 export const RECEIVE_CUSTOMERS_INDEX_FAILURE = 'RECEIVE_CUSTOMERS_INDEX_FAILURE';
 
 
+/**
+ * @function requestCustomersIndexAction
+ * @description Action-creator
+ */
 const requestCustomersIndexAction = () => ({
   type: REQUEST_CUSTOMERS_INDEX_ACTION,
 });
 
 
+/**
+ * @function receiveCustomersIndexSuccess
+ * @description Action-creator
+ * @param customers
+ * @param pagination
+ */
 const receiveCustomersIndexSuccess = (customers, pagination) => ({
   type: RECEIVE_CUSTOMERS_INDEX_SUCCESS,
   payload: {
@@ -26,6 +36,11 @@ const receiveCustomersIndexSuccess = (customers, pagination) => ({
 });
 
 
+/**
+ * @function receiveCustomersIndexFailure
+ * @description Action-creator
+ * @param error
+ */
 const receiveCustomersIndexFailure = error => ({
   type: RECEIVE_CUSTOMERS_INDEX_FAILURE,
   payload: {
@@ -33,6 +48,13 @@ const receiveCustomersIndexFailure = error => ({
   },
 });
 
+
+/**
+ * @function performCustomersIndexSearch
+ * @description GET /customers for retrieving Customers
+ * @param page
+ * @param searchTerm
+ */
 export const performCustomersIndexSearch = (page = 1, searchTerm) =>
   (dispatch) => {
     dispatch(requestCustomersIndexAction());

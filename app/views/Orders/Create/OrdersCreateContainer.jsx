@@ -34,17 +34,19 @@ import {
 
 
 /**
- * OrdersCreateContainer represents a page to create a Customer
- *
- * @description Renders:
- *   OrderDetailsForm (we're reusing this component from OrdersShow!)
- *
- * @extends Component
+ * @class OrdersCreateContainer
+ * @description Container for Order creation
  */
 export class OrdersCreateContainer extends Component {
   constructor(props) {
     super(props);
 
+
+    /**
+     * @function createOrder
+     * @description Creates an order
+     * @param e
+     */
     this.createOrder = (e) => {
       e.preventDefault();
       const values = this.props.ordersCreateForm.values;
@@ -52,14 +54,22 @@ export class OrdersCreateContainer extends Component {
       this.props.performOrdersCreateAction(values);
     };
 
+
+    /**
+     * @function retrieveCustomer
+     * @description Retrieve a specific customer
+     * @param id
+     */
     this.retrieveCustomer = (id) => {
       this.props.performRetrieveCustomer(id);
     };
   }
 
+
   componentWillMount() {
     this.retrieveCustomer(this.props.match.params.customer_id);
   }
+
 
   render() {
     const {

@@ -23,11 +23,8 @@ import {
 
 
 /**
- * OrdersTable represents a table that displays specific Orders
- *
- * @description Renders rows to display information about Orders
- *
- * @extends Component
+ * @class OrdersTable
+ * @description Table to display orders
  */
 export default class OrdersTable extends Component {
   render() {

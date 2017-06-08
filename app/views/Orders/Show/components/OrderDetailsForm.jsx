@@ -16,14 +16,11 @@ import SuccessButton from '../../../common/buttons/SuccessButton';
 
 
 /**
- * OrderDetailsForm represents a form showing Customer details
- *
- * @description Renders a SuccessButton and several fields
- *   date
- *   status
- *   description
- *
- * @extends Component
+ * @class OrderDetailsForm
+ * @description ConnectedForm for Order Creation and Updates
+ *   Field for Date
+ *   Field for Status
+ *   Field for Description
  */
 export class OrderDetailsForm extends Component {
   render() {
@@ -88,6 +85,12 @@ OrderDetailsForm.defaultProps = {
 };
 
 
+/**
+ * @function validate
+ * @description Check values for potential errors
+ * @param values
+ * @returns {{}}
+ */
 const validate = (values) => {
   const errors = {};
 

@@ -23,11 +23,8 @@ import {
 
 
 /**
- * CustomersTable represents a table that displays specific Customers
- *
- * @description Renders rows to display information about Customers
- *
- * @extends Component
+ * @class CustomersTable
+ * @description Table for rendering Customers
  */
 export default class CustomersTable extends Component {
   render() {
@@ -64,7 +61,9 @@ export default class CustomersTable extends Component {
                         {moment(customer.createdAt).format('lll')}
                       </td>
                       <td className="hidden-xs hidden-sm">
-                        <Link to={`/orders/create/${customer._id}`}>New Order</Link>
+                        <Link to={`/orders/create/${customer._id}`}>
+                          New Order
+                        </Link>
                       </td>
                     </tr>
                   ));

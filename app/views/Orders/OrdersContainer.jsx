@@ -16,12 +16,11 @@ import OrdersShowContainer from './Show/OrdersShowContainer';
 
 
 /**
- * OrdersContainer is a wrapper for the Orders pages of this app
- *
- * @description Renders:
- *   AuthenticatedLayout
- *   OrdersIndex, OrdersShow, or OrdersCreate depending on Route
- *
+ * @class OrdersContainer
+ * @description Routing container for pertinent Orders routes
+ *   "/orders/create/:customer_id" exact Route renders the OrdersCreateContainer
+ *   "/orders/:id" exact Route renders the OrdersShowContainer
+ *   "/orders" Route renders the OrdersIndexContainer
  */
 export default class OrdersContainer extends Component {
   render() {

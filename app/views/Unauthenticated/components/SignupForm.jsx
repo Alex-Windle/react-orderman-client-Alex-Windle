@@ -21,17 +21,12 @@ import SuccessButton from '../../common/buttons/SuccessButton';
 
 
 /**
- * SignupForm represents the form to register new Users (system admins)
- *
- * @description Renders 2 fields and a SuccessButton
- *   email input
- *   password input
+ * @class SignupForm
+ * @description Connected ReduxForm
+ *   Email Field
+ *   Password Field
  *   SuccessButton
- *
- * PROPS:
- *   handleSubmit {func} Form onSubmit handler
- *
- * @extends Component
+ *   Link to /login
  */
 export class SignupForm extends Component {
   render() {
@@ -98,6 +93,12 @@ SignupForm.propTypes = {
 SignupForm.defaultProps = {};
 
 
+/**
+ * @function validate
+ * @description Validate fields in the form
+ * @param values
+ * @returns {{}}
+ */
 const validate = (values) => {
   const errors = {};
   if (!values.email) {

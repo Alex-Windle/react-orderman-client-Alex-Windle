@@ -39,22 +39,39 @@ import {
 
 
 /**
- * CustomersShowContainer represents a page with a list of all Customers for a given admin
- *
- * @extends Component
+ * @class CustomersShowContainer
+ * @description Container for Customer Display and Updates
  */
 export class CustomersShowContainer extends Component {
   constructor(props) {
     super(props);
 
+
+    /**
+     * @function retrieveCustomer
+     * @description Retrieves a specific customer by ID
+     * @param id
+     */
     this.retrieveCustomer = (id) => {
       this.props.performRetrieveCustomer(id);
     };
 
+
+    /**
+     * @function retrieveOrdersForCustomer
+     * @description Retrieves Orders for a specific Customer
+     * @param page
+     */
     this.retrieveOrdersForCustomer = (page = 1) => {
       this.props.performOrdersIndexAction(page, null, this.props.match.params.id);
     };
 
+
+    /**
+     * @function handleSubmit
+     * @description Submit handler for Customer updates
+     * @param e
+     */
     this.handleSubmit = (e) => {
       e.preventDefault();
       const { values } = this.props.customerDetailsForm;
@@ -62,10 +79,12 @@ export class CustomersShowContainer extends Component {
     };
   }
 
+
   componentWillMount() {
     this.retrieveCustomer(this.props.match.params.id);
     this.retrieveOrdersForCustomer(1);
   }
+
 
   render() {
     const {

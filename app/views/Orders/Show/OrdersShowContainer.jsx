@@ -34,36 +34,51 @@ import {
 
 
 /**
- * OrdersShowContainer represents a page with an Order
- *
- * @description Renders:
- *   AuthenticatedLayout
- *   OrdersTable
- *
- * @extends Component
+ * @class OrdersShowContainer
+ * @description Container for showing, updating, and deleting Orders
  */
 export class OrdersShowContainer extends Component {
   constructor(props) {
     super(props);
 
+
+    /**
+     * @function retrieveOrder
+     * @description Retrieve a specific Order
+     * @param id
+     */
     this.retrieveOrder = (id) => {
       this.props.performRetrieveOrder(id);
     };
 
+
+    /**
+     * @function handleSubmit
+     * @description Submit handler for updating an Order
+     * @param e
+     */
     this.handleSubmit = (e) => {
       e.preventDefault();
       const { values } = this.props.orderDetailsForm;
       this.props.performUpdateOrder(this.props.match.params.id, values);
     };
 
+
+    /**
+     * @function deleteOrder
+     * @description Click handler for deleting an Order
+     * @param id
+     */
     this.deleteOrder = (id) => {
       this.props.performDeleteOrder(id);
     };
   }
 
+
   componentWillMount() {
     this.retrieveOrder(this.props.match.params.id);
   }
+
 
   render() {
     const {

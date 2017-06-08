@@ -11,17 +11,18 @@ import { debounce } from 'lodash';
 
 
 /**
- * SearchBar represents a responsive search input
- *
- * @description SearchBar responds to onChange events. It debounces the events
- * then triggers the 'handleSearch' function passed to it as a prop after Xms.
- * @extends Component
+ * @class SearchBar
+ * @description Represents an input that responds and debounces onChange events
  */
 export default class SearchBar extends Component {
   constructor(props) {
     super(props);
 
+    /**
+     * Use lodash debounce to debounce the handleSearch function
+     */
     this.debouncedHandleSearch = debounce(this.props.handleSearch, 500);
+
 
     /**
      * @function _handleSearch
@@ -40,6 +41,7 @@ export default class SearchBar extends Component {
       this.debouncedHandleSearch(value);
     };
   }
+
 
   render() {
     const { disabled, placeholder } = this.props;
@@ -64,6 +66,7 @@ SearchBar.propTypes = {
   handleSearch: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
 };
+
 
 SearchBar.defaultProps = {
   disabled: true,

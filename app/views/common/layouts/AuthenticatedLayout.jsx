@@ -16,16 +16,8 @@ import PageTitle from '../titles/PageTitle';
 
 
 /**
- * AuthenticatedLayout gives you a layout to reuse on your
- * authenticated pages like the various Customers* and Orders* pages
- *
- * @description Renders:
- *   Navbar
- *   BackButton (sometimes)
- *   PageTitle
- *   children
- *
- * @extends Component
+ * @class UnauthenticatedLayout
+ * @description A reusable layout for your authenticated pages like Customers and Orders
  */
 export default class AuthenticatedLayout extends Component {
   render() {

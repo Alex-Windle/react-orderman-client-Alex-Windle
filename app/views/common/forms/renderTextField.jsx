@@ -9,6 +9,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
+/**
+ * @function renderTextField
+ * @description Renders a Bootstrap form input
+ *
+ * @param input
+ * @param label
+ * @param placeholder
+ * @param disabled
+ * @param type
+ */
 const renderTextField = ({ input, label, placeholder, disabled, type }) => (
   <div className="form-group">
     {(() => {
@@ -34,6 +44,7 @@ const renderTextField = ({ input, label, placeholder, disabled, type }) => (
   </div>
 );
 
+
 renderTextField.propTypes = {
   disabled: PropTypes.bool,
   input: PropTypes.any.isRequired,
@@ -42,11 +53,13 @@ renderTextField.propTypes = {
   type: PropTypes.string,
 };
 
+
 renderTextField.defaultProps = {
   disabled: false,
   label: '',
   placeholder: '',
   type: 'text',
 };
+
 
 export default renderTextField;

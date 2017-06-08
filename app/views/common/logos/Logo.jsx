@@ -10,11 +10,8 @@ import logoImage from '../../../assets/logo.png';
 
 
 /**
- * Logo represents the OrderMan project logo
- *
- * @description Renders a responsive image of the logo
- *
- * @extends Component
+ * @class Logo
+ * @description Renders a Bootstrap responsive image
  */
 export default class Logo extends Component {
   render() {

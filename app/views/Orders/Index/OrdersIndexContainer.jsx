@@ -27,23 +27,29 @@ import {
 
 
 /**
- * OrdersIndexContainer represents a page with a list of all Orders for a given admin
- *
- * @description Renders:
- *   AuthenticatedLayout
- *   OrdersTable
- *   Pagination
- *
- * @extends Component
+ * @class OrdersIndexContainer
+ * @description Container for retrieving Orders
  */
 export class OrdersIndexContainer extends Component {
   constructor(props) {
     super(props);
 
+
+    /**
+     * @function findOrders
+     * @description Retrieve orders
+     * @param page
+     */
     this.findOrders = (page = 1) => {
       this.props.performOrdersIndexAction(page, this.state.searchTerm);
     };
 
+
+    /**
+     * @function handleSearch
+     * @description Search handler for SearchBar
+     * @param searchTerm
+     */
     this.handleSearch = (searchTerm) => {
       this.setState({
         searchTerm,
@@ -52,13 +58,16 @@ export class OrdersIndexContainer extends Component {
     };
   }
 
+
   state = {
     searchTerm: null,
   };
 
+
   componentWillMount() {
     this.findOrders(1);
   }
+
 
   render() {
     const {
@@ -68,6 +77,7 @@ export class OrdersIndexContainer extends Component {
         pagination,
       },
     } = this.props;
+
     return (
       <AuthenticatedLayout
         pageTitle="Orders"

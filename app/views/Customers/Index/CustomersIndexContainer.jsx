@@ -32,23 +32,29 @@ import {
 
 
 /**
- * CustomersIndexContainer represents a page with a list of all Customers for a given admin
- *
- * @description Renders:
- *   AuthenticatedLayout
- *   CustomersTable
- *   Pagination
- *
- * @extends Component
+ * @class CustomersIndexContainer
+ * @description Container for Customer creation
  */
 export class CustomersIndexContainer extends Component {
   constructor(props) {
     super(props);
 
+
+    /**
+     * @function findCustomers
+     * @description Retrieves Customers with potential searchTerm
+     * @param page
+     */
     this.findCustomers = (page = 1) => {
       this.props.performCustomersIndexSearch(page, this.state.searchTerm);
     };
 
+
+    /**
+     * @function handleSearch
+     * @description Search handler
+     * @param searchTerm
+     */
     this.handleSearch = (searchTerm) => {
       this.setState({
         searchTerm,
@@ -57,9 +63,11 @@ export class CustomersIndexContainer extends Component {
     };
   }
 
+
   state = {
     searchTerm: null,
   };
+
 
   componentWillMount() {
     this.findCustomers(1);
