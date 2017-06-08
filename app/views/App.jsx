@@ -13,14 +13,12 @@ import SignupContainer from './Signup/SignupContainer';
 
 
 /**
- * App acts as a proxy to render other components
- *
+ * @class App
  * @description This component will only render once, when the app is first loaded.
  * We use it's lifecycle hook componentWillMount to do things that only
  * happen once like creating websocket connections, and starting analytics
  * and error reporting services.
  *
- * @extends Component
  */
 export default class App extends Component {
   render() {

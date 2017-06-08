@@ -9,8 +9,8 @@ import React, { Component } from 'react';
 
 
 /**
- * SignupContainer represents the Signup page of the application.
- *
+ * @class SignupContainer
+ * @description Base component for application
  */
 export default class SignupContainer extends Component {
   render() {
