@@ -21,7 +21,7 @@ import {} from './styles/cssImports';
 
 
 // Component imports
-import App from './views/App';
+import Routes from './views/Routes';
 
 
 /**
@@ -30,6 +30,6 @@ import App from './views/App';
  * there is a simple div with the ID 'app'.
  */
 ReactDOM.render(
-  <App />,
+  <Routes />,
   document.getElementById('app'),
 );
