@@ -11,6 +11,7 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import BrowserRouter from 'react-router-dom';
 
 
 /**
@@ -29,7 +30,8 @@ import Routes from './views/Routes';
  * ID 'app'. If you look at our `index.ejs` file, you'll see that
  * there is a simple div with the ID 'app'.
  */
-ReactDOM.render(
-  <Routes />,
-  document.getElementById('app'),
-);
+ReactDOM.render((
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>
+), document.getElementById('app'));
