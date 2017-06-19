@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 // import { Link } from 'react-router-dom';
 
-// import SuccessButton from '../../common/buttons/SuccessButton';
+import SuccessButton from '../../common/buttons/SuccessButton';
 
 // export default class SignupForm extends Component {
 //   render() {
@@ -21,7 +21,7 @@ const SignupForm = () => (
     <form>
       <input type="email" placeholder="Email" /><br />
       <input type="text" placeholder="Password" /><br />
-      <button>Sign up</button>
+      <SuccessButton title="Sign up" />
     </form>
     <Link to="/login">I already have an account.</Link>
   </div>

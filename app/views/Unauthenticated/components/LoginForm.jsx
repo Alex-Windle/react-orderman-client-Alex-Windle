@@ -2,7 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-// import SuccessButton from '../../common/buttons/SuccessButton';
+import SuccessButton from '../../common/buttons/SuccessButton';
 
 // export default class LoginForm extends Component {
 //   render() {
@@ -23,7 +23,7 @@ const LoginForm = () => (
     <form>
       <input type="email" placeholder="Email" /><br />
       <input type="text" placeholder="Password" /><br />
-      <button>Log in</button>
+      <SuccessButton title="Log in" />
     </form>
     <Link to="/">{"I don't have an account yet."}</Link>
   </div>
