@@ -15,9 +15,15 @@ export default class UnauthenticatedLayout extends Component {
     // the children components, Route/Switch. See Unauth Container.
     const children = this.props.children;
     return (
-      <div>
-        <Logo />
-        {children}
+      <div className="text-center">
+        <div className="container-fluid spacer">
+          <Logo />
+        </div>
+        <div className="container-fluid spacer">
+          <div className="col-md-6 col-md-offset-3">
+            {children}
+          </div>
+        </div>
       </div>
     );
   }

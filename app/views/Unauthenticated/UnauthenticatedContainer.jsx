@@ -19,24 +19,37 @@ export default class UnauthenticatedContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.login = this.login.bind(this);
-    this.signup = this.signup.bind(this);
+    this.login = (event) => {
+      // Do not submit form
+      event.preventDefault();
+    };
+
+    this.signup = (event) => {
+      // Do not submit form
+      event.preventDefault();
+    };
   }
-
-  login = () => (
-    false
-  );
-
-  signup = () => (
-    false
-  );
 
   render() {
     return (
       <UnauthenticatedLayout>
         <Switch>
-          <Route path="/login" render={() => (<LoginForm handleSubmit={this.login} />)} />
-          <Route path="/" render={() => (<SignupForm handleSubmit={this.signup} />)} />
+          <Route
+            path="/login"
+            render={() =>
+              (<LoginForm
+                handleSubmit={this.login}
+              />)
+            }
+          />
+          <Route
+            path="/"
+            render={() =>
+              (<SignupForm
+                handleSubmit={this.signup}
+              />)
+            }
+          />
         </Switch>
       </UnauthenticatedLayout>
     );
