@@ -17,8 +17,13 @@ import { Link } from 'react-router-dom';
 
 const SignupForm = () => (
   <div>
-    Signup Form!<br />
-    <Link to="/login">Take me to login.</Link>
+    System Admin Sign up<br />
+    <form>
+      <input type="email" placeholder="Email" /><br />
+      <input type="text" placeholder="Password" /><br />
+      <button>Sign up</button>
+    </form>
+    <Link to="/login">I already have an account.</Link>
   </div>
 );
 

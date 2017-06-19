@@ -19,8 +19,13 @@ import { Link } from 'react-router-dom';
 
 const LoginForm = () => (
   <div>
-    Login Form!<br />
-    <Link to="/">I am not signed up yet.</Link>
+    System Admin Log in<br />
+    <form>
+      <input type="email" placeholder="Email" /><br />
+      <input type="text" placeholder="Password" /><br />
+      <button>Log in</button>
+    </form>
+    <Link to="/">{"I don't have an account yet."}</Link>
   </div>
 );
 
