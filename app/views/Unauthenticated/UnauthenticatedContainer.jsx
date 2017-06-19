@@ -20,8 +20,8 @@ export default class UnauthenticatedContainer extends Component {
     return (
       <UnauthenticatedLayout>
         <Switch>
-          <Route path="/login" render={LoginForm} />
-          <Route path="/" render={SignupForm} />
+          <Route path="/login" render={() => (<LoginForm />)} />
+          <Route path="/" render={() => (<SignupForm />)} />
         </Switch>
       </UnauthenticatedLayout>
     );
