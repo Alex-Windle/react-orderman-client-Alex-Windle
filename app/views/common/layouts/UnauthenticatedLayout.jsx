@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import Logo from '../logos/Logo';
+
 /**
  * @class UnauthenticatedLayout
  * @description Reusable layout to reuse on your
@@ -13,7 +15,10 @@ export default class UnauthenticatedLayout extends Component {
     // the children components, Route/Switch. See Unauth Container.
     const children = this.props.children;
     return (
-      <div>{children}</div>
+      <div>
+        <Logo />
+        {children}
+      </div>
     );
   }
 }
