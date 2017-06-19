@@ -1,14 +1,25 @@
 import React from 'react';
-import UnauthenticatedLayout from '../../common/layouts/UnauthenticatedLayout';
+// import PropTypes from 'prop-types';
+// import { Link } from 'react-router-dom';
 
-// This is a functional component.
-// It displays data from its parent, UnauthenticatedLayout.
+// import SuccessButton from '../../common/buttons/SuccessButton';
 
-export default function () {
-  return (
-    <div>
-      Signup form
-      <UnauthenticatedLayout />
-    </div>
-  );
-}
+// export default class SignupForm extends Component {
+//   render() {
+//     // const { handleSubmit } = this.props;
+//     return (
+//       <div>SignupForm</div>
+//     );
+//   }
+// }
+
+const SignupForm = () => (<div>Signup Form!</div>);
+
+export default SignupForm;
+
+// SignupForm.propTypes = {
+//   handleSubmit: PropTypes.func.isRequired,
+// };
+
+
+SignupForm.defaultProps = {};
