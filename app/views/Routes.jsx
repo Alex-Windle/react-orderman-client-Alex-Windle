@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import createHashHistory from 'history/createHashHistory';
-
-import {
-  Route,
-  Router,
-  Switch,
-} from 'react-router-dom';
+import { Route, Router, Switch } from 'react-router-dom';
 
 // Page imports
 import UnauthenticatedContainer from './Unauthenticated/UnauthenticatedContainer';

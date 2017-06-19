@@ -1,16 +1,5 @@
-/**
- * GENERAL NOTES
- * @author TalkRise <admin@talkrise.com>
- */
-
-
-// Module imports
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-
-// Component imports
-
 
 /**
  * @class UnauthenticatedLayout
@@ -20,6 +9,8 @@ import PropTypes from 'prop-types';
  */
 export default class UnauthenticatedLayout extends Component {
   render() {
+    // I don't totally understand how props are being passed to Layout via
+    // the children components, Route/Switch. See Unauth Container.
     const children = this.props.children;
     return (
       <div>{children}</div>
@@ -27,10 +18,12 @@ export default class UnauthenticatedLayout extends Component {
   }
 }
 
-
+// Question: I've never seen props passed down in this manner.
+// If you look in UnauthContainer, UnauthLayout contains a Switch and Route
+// components, the route components contain the props path, render. How does
+// it work that the Route component passes props to UnauthLayout?
 UnauthenticatedLayout.propTypes = {
   children: PropTypes.element.isRequired,
 };
-
 
 UnauthenticatedLayout.defaultProps = {};

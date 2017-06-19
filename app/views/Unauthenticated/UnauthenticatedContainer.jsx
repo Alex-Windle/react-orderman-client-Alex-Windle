@@ -1,21 +1,9 @@
-/**
- * GENERAL NOTES
- * @author TalkRise <admin@talkrise.com>
- */
-
-
-// Module imports
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-
-// Component imports
-// import LoginForm from './components/LoginForm';
-// import SignupForm from './components/SignupForm';
 import UnauthenticatedLayout from '../common/layouts/UnauthenticatedLayout';
 import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
-// import SuccessButton from '../common/buttons/SuccessButton';
 
 /**
  * @class UnauthenticatedContainer
@@ -26,12 +14,6 @@ import SignupForm from './components/SignupForm';
  * two Routes:
  *   "/login" renders the LoginForm
  *   "/" renders the SignupForm
- *
- * Unauth Container
- * > Unauth Layout
- * > Signup or Login form
- *
- *
  */
 export default class UnauthenticatedContainer extends Component {
   render() {
@@ -45,7 +27,6 @@ export default class UnauthenticatedContainer extends Component {
     );
   }
 }
-
 
 UnauthenticatedContainer.propTypes = {};
 
