@@ -36,16 +36,18 @@ export default class UnauthenticatedContainer extends Component {
         <Switch>
           <Route
             path="/login"
-            render={() =>
+            render={props =>
               (<LoginForm
+                {...props}
                 handleSubmit={this.login}
               />)
             }
           />
           <Route
             path="/"
-            render={() =>
+            render={props =>
               (<SignupForm
+                {...props}
                 handleSubmit={this.signup}
               />)
             }
