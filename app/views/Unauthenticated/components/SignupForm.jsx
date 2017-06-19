@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 // import PropTypes from 'prop-types';
 // import { Link } from 'react-router-dom';
 
@@ -13,7 +15,12 @@ import React from 'react';
 //   }
 // }
 
-const SignupForm = () => (<div>Signup Form!</div>);
+const SignupForm = () => (
+  <div>
+    Signup Form!<br />
+    <Link to="/login">Take me to login.</Link>
+  </div>
+);
 
 export default SignupForm;
 
