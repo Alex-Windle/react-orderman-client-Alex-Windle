@@ -1,7 +1,7 @@
 import React from 'react';
 import logoImage from '../../../assets/logo.png';
 
-const Logo = () => (
+export default () => (
   <img
     src={logoImage}
     alt="TalkRise OrderMan"
@@ -9,5 +9,3 @@ const Logo = () => (
     width="150"
   />
 );
-
-export default Logo;

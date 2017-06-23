@@ -3,15 +3,38 @@ import PropTypes from 'prop-types';
 
 export default class SuccessButton extends Component {
   render() {
-    const title = this.props.title;
+    const {
+      block,
+      disabled,
+      loading,
+      onClick,
+      title,
+    } = this.props;
     return (
-      <button style={{ border: 'none', borderRadius: '4px', color: 'white', backgroundColor: '#7EC0EE' }}>
-        {title}
+      <button
+        type="submit"
+        className={`btn btn-info ${block ? 'btn-block' : ''}`}
+        disabled={disabled || loading}
+        onClick={onClick}
+      >
+        {(() => (loading ? <i className="fa fa-spin fa-spinner" /> : title))()}
       </button>
     );
   }
 }
 
+
 SuccessButton.propTypes = {
+  block: PropTypes.bool,
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+};
+
+
+SuccessButton.defaultProps = {
+  block: false,
+  disabled: false,
+  onClick: () => {},
 };
